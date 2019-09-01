@@ -14,7 +14,7 @@ import com.samihus.magicdraw.wrapper.internal.utils.WStereotypedElement
   *            General Information about the wrapped elements
   *
   */
-trait WNamedElement [+T <: NamedElement] extends ScalaApi {
+trait WNamedElement [+T <: NamedElement]  {
   /**
     * The wrapped Element by the wrapper
     * @group General-Information

@@ -15,8 +15,8 @@ import com.samihus.magicdraw.wrapper.api.scalaApi.{WAssociation, WAttribute, WCl
   * @param baseElement : Element from a Magicdraw's model
   * @tparam T : Supposed type of element
   */
-case class WCaster[T <: NamedElement, X](f: T => X)(baseElement: BaseElement) {
-  def safeWrap: Option[X] = safeCast.map(f)
+case class WCaster[T <: NamedElement, W](f: T => W)(baseElement: BaseElement) {
+  def safeWrap: Option[W] = safeCast.map(f)
 
   /**
     * Try to cast
