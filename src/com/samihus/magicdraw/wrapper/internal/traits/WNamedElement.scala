@@ -2,7 +2,6 @@ package com.samihus.magicdraw.wrapper.internal.traits
 
 import com.nomagic.uml2.ext.jmi.helpers.{CoreHelper, StereotypesHelper}
 import com.nomagic.uml2.ext.magicdraw.classes.mdkernel.{Element, NamedElement}
-import com.samihus.magicdraw.wrapper.api.scalaApi.WStereotype
 import com.samihus.magicdraw.wrapper.internal.utils.WStereotypedElement
 
 /**
@@ -14,7 +13,7 @@ import com.samihus.magicdraw.wrapper.internal.utils.WStereotypedElement
   *            General Information about the wrapped elements
   *
   */
-trait WNamedElement [+T <: NamedElement]  {
+trait WNamedElement [+T <: NamedElement] extends ScalaWrapperTrait {
   /**
     * The wrapped Element by the wrapper
     * @group General-Information

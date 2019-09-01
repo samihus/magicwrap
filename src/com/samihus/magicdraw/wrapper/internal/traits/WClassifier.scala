@@ -4,7 +4,6 @@ import java.util
 
 import com.nomagic.uml2.ext.jmi.helpers.ClassifierHelper
 import com.nomagic.uml2.ext.magicdraw.classes.mdkernel.{Classifier, Property}
-import com.samihus.magicdraw.wrapper.api.scalaApi.{WAttribute, WOperation}
 
 import scala.collection.JavaConverters._
 /**
@@ -30,7 +29,7 @@ trait WClassifier[+C <: Classifier] extends WType[C] {
     * @group Attributes
     * @return Returns all self owned attributes (excludes inherited ones)
     */
-  def attributes(): Set[WAttribute] = wrappedElement.getAttribute.asScala.map(WAttribute).toSet
+  def attributes(): Set[WAttribute] = wrappedElement.getAttribute.asScala.map(WAttributeConst).toSet
 
   /**
     * @group Attributes
@@ -57,7 +56,7 @@ trait WClassifier[+C <: Classifier] extends WType[C] {
      */
     var tmp = new util.LinkedList[Property]()
     ClassifierHelper.collectInheritedAttributes(wrappedElement, tmp, true,true)
-    tmp.asScala.toSet.map(WAttribute)(collection.breakOut)
+    tmp.asScala.toSet.map(WAttributeConst)(collection.breakOut)
   }
 
   /**
@@ -106,15 +105,4 @@ trait WClassifier[+C <: Classifier] extends WType[C] {
     */
   def operations: Set[WOperation] = ???
 
-  /**
-    * @group Sub-SuperTypes
-    * @return List of direct parents
-    */
-  def getDirectParents: List[WClassifier[C]]
-
-  /**
-    * @group Sub-SuperTypes
-    * @return List of all parents hierarchy
-    */
-  def getAllParents:List[WClassifier[C]]
 }

@@ -1,25 +1,8 @@
 package com.samihus.magicdraw.wrapper.api.scalaApi
 
-import com.nomagic.uml2.ext.magicdraw.classes.mdkernel.{DataType, Enumeration}
-import com.samihus.magicdraw.wrapper.internal.traits.{WClassifier, WNamedElement, WType}
-import com.samihus.magicdraw.wrapper.internal.traits
-import scala.collection.JavaConverters._
-case class WEnumeration(wrappedElement: Enumeration) extends WNamedElement[DataType]
-  with WType[Enumeration]
-  with WClassifier[DataType]
-  with com.samihus.magicdraw.wrapper.internal.traits.WDataType {
+import com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Enumeration
+import com.samihus.magicdraw.wrapper.internal.traits.{WEnumeration => E}
 
-  /**
-    * @group Sub-SuperTypes
-    * @return List of direct parents
-    */
-  override def getDirectParents: List[WEnumeration] = ???
+case class WEnumeration(override val wrappedElement: Enumeration) extends E with ScalaWrapper {
 
-  /**
-    * @group Sub-SuperTypes
-    * @return List of all parents hierarchy
-    */
-  override def getAllParents: List[WEnumeration] = ???
-
-  def getEnumerationLiterals: Set[WEnumerationLiteral] = wrappedElement.getOwnedLiteral.asScala.toSet.map(WEnumerationLiteral)
 }

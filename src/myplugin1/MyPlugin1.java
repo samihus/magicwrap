@@ -41,7 +41,7 @@ public class MyPlugin1 extends Plugin
 		WClass wcl = new WClass(cl);
 		HashMap<String,String> map = new HashMap<>();
 		wcl.allAttributes().foreach(
-			x -> map.put(x.name(),x.isOfType().get().toString())
+			x -> map.put(x.name(),x.classifierType().get().toString())
 		);
 		String s = "";
 		for(Map.Entry<String, String> m: map.entrySet()) {
