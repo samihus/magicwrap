@@ -63,7 +63,7 @@ class WrapperTest  {
   }
 
   @Test
-  def testStereotypeApplication: Unit = {
+  def testStereotypeApplication(): Unit = {
     val wp = scalaApi.WPackage(
       //package1
       project.getElementByID("_19_0_1_6490213_1566413742058_44872_4610").
@@ -75,7 +75,7 @@ class WrapperTest  {
   }
 
   @Test
-  def testClassAllAttributes: Unit = {
+  def testClassAllAttributes(): Unit = {
     val cl = WClass(
       //Pet
       project.getElementByID("_19_0_1_6490213_1566413767485_541943_4645").asInstanceOf[Class]
@@ -84,16 +84,16 @@ class WrapperTest  {
   }
 
   @Test
-  def testClassAttributes: Unit = {
+  def testClassAttributes(): Unit = {
     val cl = scalaApi.WClass(
       //Pet
       project.getElementByID("_19_0_1_6490213_1566413767485_541943_4645").asInstanceOf[Class]
     )
-    assertTrue(cl.attributes.map(_.name).toSet == Set("birth date","specie","petMaster" ))
+    assertTrue(cl.attributes().map(_.name).toSet == Set("birth date","specie","petMaster" ))
   }
 
   @Test
-  def testClassAttributesFromAssociation: Unit = {
+  def testClassAttributesFromAssociation(): Unit = {
     val cl = scalaApi.WClass(
       // Pet
       project.getElementByID("_19_0_1_6490213_1566413767485_541943_4645").asInstanceOf[Class]
@@ -103,7 +103,7 @@ class WrapperTest  {
   }
 
   @Test
-  def testClassOwnedAttributes: Unit = {
+  def testClassOwnedAttributes(): Unit = {
     val cl = scalaApi.WClass(
       // Pet
       project.getElementByID("_19_0_1_6490213_1566413767485_541943_4645").asInstanceOf[Class]
@@ -117,7 +117,7 @@ class WrapperTest  {
   }
 
   @Test
-  def testHasAttributeOwned: Unit ={
+  def testHasAttributeOwned(): Unit ={
     val cl = scalaApi.WClass(
       // Pet
       project.getElementByID("_19_0_1_6490213_1566413767485_541943_4645").asInstanceOf[Class]
@@ -126,7 +126,7 @@ class WrapperTest  {
   }
 
   @Test
-  def testAllAttributes: Unit = {
+  def testAllAttributes(): Unit = {
     val cl = scalaApi.WClass(
       // Pet
       project.getElementByID("_19_0_1_6490213_1566413767485_541943_4645").asInstanceOf[Class]
@@ -135,7 +135,7 @@ class WrapperTest  {
   }
 
   @Test
-  def testAllAttributesFromAssociations: Unit = {
+  def testAllAttributesFromAssociations(): Unit = {
     val cl = scalaApi.WClass(
       // Pet
       project.getElementByID("_19_0_1_6490213_1566413767485_541943_4645").asInstanceOf[Class]
@@ -144,7 +144,7 @@ class WrapperTest  {
   }
 
   @Test
-  def testAllAttributesNotFromAssociations: Unit = {
+  def testAllAttributesNotFromAssociations(): Unit = {
     val cl = scalaApi.WClass(
       // Pet
       project.getElementByID("_19_0_1_6490213_1566413767485_541943_4645").asInstanceOf[Class]
@@ -154,7 +154,7 @@ class WrapperTest  {
 
 
   @Test
-  def testHasAttributeInherited: Unit = {
+  def testHasAttributeInherited(): Unit = {
     val cl = scalaApi.WClass(
       // Pet
       project.getElementByID("_19_0_1_6490213_1566413767485_541943_4645").asInstanceOf[Class]
@@ -163,7 +163,7 @@ class WrapperTest  {
   }
 
   @Test
-  def testHasAttributeFromInheritedAssociation: Unit = {
+  def testHasAttributeFromInheritedAssociation(): Unit = {
     val cl = scalaApi.WClass(
       // Pet
       project.getElementByID("_19_0_1_6490213_1566413767485_541943_4645").asInstanceOf[Class]
@@ -231,10 +231,33 @@ class WrapperTest  {
   }
 
   @Test
-  def testAttributeWrapper: Unit = {
+  def testAttributeWrapper(): Unit = {
     val mdCl: BaseElement= project.getElementByID("_19_0_1_6490213_1566414121971_53324_4733") //Dog
 //TODO
   }
+
+  @Test
+  def testClassOperations: Unit = {
+    val pet = project.getElementByID("_19_0_1_6490213_1566413767485_541943_4645")
+    val wpet: WClass = WCaster.toMayBeWClass(pet).get
+    assertTrue(wpet.ownedOperations.map(_.name) == Set("sansnom1"))
+
+  }
+
+  @Test
+  def testallClassOperations: Unit = {
+    val dog =  project.getElementByID("_19_0_1_6490213_1566414121971_53324_4733")
+    val wdog: WClass = WCaster.toMayBeWClass(dog).get
+    assertTrue(wdog.allOperations.map(_.name) == Set("sansnom1","aboie"))
+  }
+
+    @Test
+  def testInheritedClassOperations: Unit = {
+    val dog =  project.getElementByID("_19_0_1_6490213_1566414121971_53324_4733")
+    val wdog: WClass = WCaster.toMayBeWClass(dog).get
+    assertTrue(wdog.inheritedOperations.map(_.name) == Set("sansnom1"))
+  }
+
   def close(): Unit = {
   }
 }

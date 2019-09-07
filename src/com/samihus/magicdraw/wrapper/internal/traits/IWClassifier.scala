@@ -11,7 +11,7 @@ import scala.collection.JavaConverters._
   *
   * @tparam C  UML Element which is a subtype of Classifier
   */
-trait WClassifier[+C <: Classifier] extends WType[C] {
+trait IWClassifier[+C <: Classifier] extends IWNamedElement[C] {
   /**
     * @groupname Attributes Attributes of the classifier
     * @groupname Operations Operations of the classifier
@@ -29,25 +29,25 @@ trait WClassifier[+C <: Classifier] extends WType[C] {
     * @group Attributes
     * @return Returns all self owned attributes (excludes inherited ones)
     */
-  def attributes(): Set[WAttribute] = wrappedElement.getAttribute.asScala.map(WAttributeConst).toSet
+  def attributes(): Set[IWAttribute] = wrappedElement.getAttribute.asScala.map(WAttributeConstructor).toSet
 
   /**
     * @group Attributes
     * @return returns all self owned attributes coming from association role (excludes inherited ones)
     */
-  def attributesFromAssociations: Set[WAttribute] = attributes.filter(_.isFromAssociation)
+  def attributesFromAssociations: Set[IWAttribute] = attributes.filter(_.isFromAssociation)
 
   /**
     * @group Attributes
     * @return all self owned attributes not coming from association role (exclude inherited ones)
     */
-  def ownedAttributes: Set[WAttribute] = attributes.filterNot(_.isFromAssociation)
+  def ownedAttributes: Set[IWAttribute] = attributes.filterNot(_.isFromAssociation)
 
   /**
     * @group Attributes
     * @return  all attributes, including inherited
     */
-  def allAttributes: Set[WAttribute] = {
+  def allAttributes: Set[IWAttribute] = {
     /*
     wrappedElement.getMember.asScala
       .filter(_.isInstanceOf[Property])
@@ -56,20 +56,20 @@ trait WClassifier[+C <: Classifier] extends WType[C] {
      */
     var tmp = new util.LinkedList[Property]()
     ClassifierHelper.collectInheritedAttributes(wrappedElement, tmp, true,true)
-    tmp.asScala.toSet.map(WAttributeConst)(collection.breakOut)
+    tmp.asScala.toSet.map(WAttributeConstructor)(collection.breakOut)
   }
 
   /**
     * @group Attributes
     * @return all attributes coming from associations
     */
-  def allAttributesFromAssociations: Set[WAttribute] = allAttributes.filter(_.isFromAssociation)
+  def allAttributesFromAssociations: Set[IWAttribute] = allAttributes.filter(_.isFromAssociation)
 
   /**
     * @group Attributes
     * @return all attributes, exluding association roles
     */
-  def allAttributesNotFromAssociations: Set[WAttribute] = allAttributes.filterNot(_.isFromAssociation)
+  def allAttributesNotFromAssociations: Set[IWAttribute] = allAttributes.filterNot(_.isFromAssociation)
 
   /**
     * @group Attributes
@@ -86,7 +86,7 @@ trait WClassifier[+C <: Classifier] extends WType[C] {
     * @return Some(WAttribute) if attribute is found, None if not
     */
 
-  def getAttribute(name:String): Option[WAttribute] = if (hasAttribute(name)) {
+  def getAttribute(name:String): Option[IWAttribute] = if (hasAttribute(name)) {
     Some(allAttributes.filter(a => a.name.equals(name)).head)
   } else {
     None
@@ -97,12 +97,7 @@ trait WClassifier[+C <: Classifier] extends WType[C] {
     * @group Attributes
     * @return List of the  redefined attributes
     */
-  def ownedRedefinedAttributes: Set[WAttribute] = allAttributes.filter(_.redefinesAttribute.isDefined)
+  def ownedRedefinedAttributes: Set[IWAttribute] = allAttributes.filter(_.redefinesAttribute.isDefined)
 
-  /**
-    * @group Operations
-    * @return
-    */
-  def operations: Set[WOperation] = ???
 
 }

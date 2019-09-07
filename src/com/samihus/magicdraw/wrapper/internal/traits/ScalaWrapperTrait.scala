@@ -5,13 +5,12 @@ import com.nomagic.uml2.ext.magicdraw.classes.mdkernel.{Class, DataType, Enumera
 
 
 trait ScalaWrapperTrait {
-  val WAttributeConst: Property => WAttribute
-  val WClassConst: Class => WClass[Class]
-  val WEnumConst: Enumeration => WEnumeration
-  val WPrimitiveTypeConst: PrimitiveType => WPrimitiveType
-  val WDataTypeConst: DataType => WDataType[DataType]
-  val WInterfaceConst: Interface => WInterface
-  val WOperationConst: Operation => WOperation
-  val WEnumerationLiteralConst: EnumerationLiteral => WEnumerationLiteral
-
+  val WAttributeConstructor: Property => IWAttribute
+  val WClassConstructor: Class => IWClass
+  val WEnumerationConstructor: Enumeration => IWEnumeration
+  val WPrimitiveTypeConstructor: PrimitiveType => IWPrimitiveType
+  val WDataTypeConstructor: DataType => IWDataType
+  val WInterfaceConstructor: Interface => IWInterface
+  val WOperationConstructor: Operation => IWOperation
+  val WEnumerationLiteralConstructor: EnumerationLiteral => IWEnumerationLiteral
 }

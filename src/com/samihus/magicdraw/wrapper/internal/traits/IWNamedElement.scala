@@ -13,7 +13,7 @@ import com.samihus.magicdraw.wrapper.internal.utils.WStereotypedElement
   *            General Information about the wrapped elements
   *
   */
-trait WNamedElement [+T <: NamedElement] extends ScalaWrapperTrait {
+trait IWNamedElement [+T <: NamedElement] extends ScalaWrapperTrait {
   /**
     * The wrapped Element by the wrapper
     * @group General-Information
@@ -51,7 +51,7 @@ trait WNamedElement [+T <: NamedElement] extends ScalaWrapperTrait {
     * @param stereotype Wrapped Stereotype to check
     * @return true if the stereotype is applied to the wrapped element
     */
-  def hasStereotype(stereotype: WStereotype): Boolean = StereotypesHelper.hasStereotype(wrappedElement,stereotype.wrappedElement)
+  def hasStereotype(stereotype: IWStereotype): Boolean = StereotypesHelper.hasStereotype(wrappedElement,stereotype.wrappedElement)
 
   /**
     * @group Stereotype
@@ -60,8 +60,8 @@ trait WNamedElement [+T <: NamedElement] extends ScalaWrapperTrait {
     */
   def hasStereotype(stereotypeName: String): Boolean = StereotypesHelper.hasStereotype(wrappedElement,stereotypeName)
 
-  def as(stereotype: WStereotype) = ???
+  def as(stereotype: IWStereotype) = ???
 
-  def ownedElementWithStereotype(stereotype: WStereotype) = Option(WStereotypedElement(this, stereotype))
+  def ownedElementWithStereotype(stereotype: IWStereotype) = Option(WStereotypedElement(this, stereotype))
 
 }

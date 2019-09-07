@@ -6,6 +6,8 @@ import com.nomagic.uml2.ext.magicdraw.classes.mdkernel.{Association, Class, Data
 import com.nomagic.uml2.ext.magicdraw.mdprofiles.Stereotype
 import com.samihus.magicdraw.wrapper.api.scalaApi.{WAssociation, WAttribute, WClass, WDataType, WEnumeration, WEnumerationLiteral, WInterface, WOperation, WPackage, WPrimitiveType, WStereotype}
 
+import scala.util.{Failure, Success, Try}
+
 /**
   * Encapsulates a base object in order to safe extract from it a named element (if relevant)
   * {{
@@ -16,14 +18,21 @@ import com.samihus.magicdraw.wrapper.api.scalaApi.{WAssociation, WAttribute, WCl
   * @tparam T : Supposed type of element
   */
 case class WCaster[T <: NamedElement, W](f: T => W)(baseElement: BaseElement) {
-  def safeWrap: Option[W] = safeCast.map(f)
+  def safeWrap: Option[W] = safeCast match {
+    case Some(value) => Some(f(value))
+    case None => None
+  }
 
   /**
     * Try to cast
     *
     * @return
     */
-  def safeCast: Option[T] = Option(baseElement.asInstanceOf[T])
+  def safeCast: Option[T] = baseElement match {
+    case t: T => Some(t)
+    case _ => None
+  }
+
 }
 
 object WCaster {

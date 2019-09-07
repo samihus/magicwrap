@@ -2,11 +2,15 @@ package com.samihus.magicdraw.wrapper.internal.traits
 
 import com.nomagic.uml2.ext.jmi.helpers.CoreHelper
 import com.nomagic.uml2.ext.magicdraw.classes.mdinterfaces.Interface
-import com.nomagic.uml2.ext.magicdraw.classes.mdkernel.{Association, Class, Classifier, DataType, Enumeration, PrimitiveType, Property}
+import com.nomagic.uml2.ext.magicdraw.classes.mdkernel.{Association, Class, DataType, Enumeration, PrimitiveType, Property}
 
 import scala.collection.JavaConverters._
 
-trait WAttribute extends WNamedElement[Property] {
+/**
+  * @groupname General-Information
+  *            General Information
+  */
+trait IWAttribute extends IWNamedElement[Property] {
 
   /**
     * @group General-Information
@@ -16,46 +20,49 @@ trait WAttribute extends WNamedElement[Property] {
 
 
   /**
-    *
+    * @group General-Information
     * @return return the wrapped type instance of the attribute
     */
-  def classifierType: Option[WClassifier[Classifier]] = wrappedElement.getType match {
-    case x: Class => Some(WClassConst(x))
-    case y: Enumeration => Some(WEnumConst(y))
-    case z: PrimitiveType => Some(WPrimitiveTypeConst(z))
-    case w: DataType => Some(WDataTypeConst(w))
-    case t: Interface => Some(WInterfaceConst(t))
+  def classifierType: Option[IWType] = wrappedElement.getType match {
+    case x: Class => Some(WClassConstructor(x))
+    case y: Enumeration => Some(WEnumerationConstructor(y))
+    case z: PrimitiveType => Some(WPrimitiveTypeConstructor(z))
+    case w: DataType => Some(WDataTypeConstructor(w))
+    case t: Interface => Some(WInterfaceConstructor(t))
     case _ => None
   }
 
+  def hasType:IWType
+
   /**
     * Checks if attribute is originated by association end
-    *
+    * @group General-Information
     * @return true if the property come from an association
     */
   def isFromAssociation: Boolean = association.isDefined
 
   /**
-    *
+    * General - Information
     * @return Some(Association) if isFromAssociation = true, None else
     *         TODO WRAP THE ASSOCIATION
     */
   def association: Option[Association] = Option(wrappedElement.getAssociation)
 
   /**
-    *
+    * @group General-Information
     * @return return the redefined attribute if it is defined. None else
     */
-  def redefinesAttribute: Option[WAttribute] = wrappedElement.getRedefinedProperty.isEmpty match {
+  def redefinesAttribute: Option[IWAttribute] = wrappedElement.getRedefinedProperty.isEmpty match {
     case true => None
-    case false => Some(WAttributeConst(wrappedElement.getRedefinedProperty.asScala.head))
+    case false => Some(WAttributeConstructor(wrappedElement.getRedefinedProperty.asScala.head))
   }
 
   //todo : test
   /**
-    *
+    * @group General-Information
     * @return return the redefined attribute set if it is defined. None else
     */
-  def redefinesList: Set[WAttribute] = wrappedElement.getRedefinedProperty.asScala.toSet.map(WAttributeConst)
+  def redefinesList: Set[IWAttribute] = wrappedElement.getRedefinedProperty.asScala.toSet.map(WAttributeConstructor)
+
 
 }
