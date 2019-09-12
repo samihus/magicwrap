@@ -7,13 +7,10 @@ import com.nomagic.magicdraw.core.{Application, Project}
 import com.nomagic.magicdraw.tests.MagicDrawTestRunner
 import com.nomagic.magicdraw.uml.BaseElement
 import com.nomagic.uml2.ext.magicdraw.classes.mdkernel.{Class, Package}
-import com.samihus.magicdraw.wrapper.internal.utils.WCaster
-
 import myplugin1.MyPlugin1
 import org.junit.Assert._
 import org.junit.Test
 import org.junit.runner.RunWith
-
 import com.samihus.magicdraw.wrapper.api.scalaApi
 import com.samihus.magicdraw.wrapper.api.scalaApi.{WClass, WPackage}
 
@@ -89,7 +86,7 @@ class WrapperTest  {
       //Pet
       project.getElementByID("_19_0_1_6490213_1566413767485_541943_4645").asInstanceOf[Class]
     )
-    assertTrue(cl.attributes().map(_.name).toSet == Set("birth date","specie","petMaster" ))
+    assertTrue(cl.ownedAttributes.map(_.name) == Set("birth date","specie","petMaster" ))
   }
 
   @Test
@@ -99,7 +96,7 @@ class WrapperTest  {
       project.getElementByID("_19_0_1_6490213_1566413767485_541943_4645").asInstanceOf[Class]
     )
     val attFromAsso:Set[String] = Set("petMaster")
-    assertTrue(cl.attributesFromAssociations.map(_.name).toSet == attFromAsso)
+    assertTrue(cl.ownedAttributesFromAssociation.map(_.name).toSet == attFromAsso)
   }
 
   @Test
@@ -109,7 +106,7 @@ class WrapperTest  {
       project.getElementByID("_19_0_1_6490213_1566413767485_541943_4645").asInstanceOf[Class]
     )
 
-    val listOfOwnedAttributesNames: Set[String] = Set("birth date","specie")
+    val listOfOwnedAttributesNames: Set[String] = Set("birth date","specie","petMaster")
     assertTrue(
       cl.ownedAttributes.map(_.name) == listOfOwnedAttributesNames
     )
@@ -177,7 +174,7 @@ class WrapperTest  {
       project.getElementByID("_19_0_1_6490213_1566414121971_53324_4733").asInstanceOf[Class]
     )
 
-    assertTrue(cl.getAllParents.map(_.name).toSet == Set("Friend","Pet","Animal"))
+    assertTrue(cl.allParents.map(_.name).toSet == Set("Friend","Pet","Animal"))
   }
 
   @Test
@@ -190,9 +187,9 @@ class WrapperTest  {
         "/Users/samih/Desktop/ProjetTestWrapper/log.txt"
       )
     )
-    cl.getDirectParents.map(_.name).foreach(printer.write)
+    cl.directParents.map(_.name).foreach(printer.write)
     printer.close()
-    assertTrue(cl.getDirectParents.map(_.name).toSet == Set("Friend","Pet"))
+    assertTrue(cl.directParents.map(_.name).toSet == Set("Friend","Pet"))
   }
 
   @Test
@@ -208,8 +205,10 @@ class WrapperTest  {
 
     val mdCl: BaseElement= project.getElementByID("_19_0_1_6490213_1566414121971_53324_4733")
     val c = WCaster[Class,WClass](WClass)(mdCl)
+
+
     assertTrue(
-     c.safeWrap.get.name == "Dog"
+     WCaster.toMayBeWClass(mdCl).get.name == "Dog"
        //c.safeCast.get.getName ==  "Dog"
     )
   }
@@ -227,7 +226,7 @@ class WrapperTest  {
   @Test
   def ownedRedefinedAttributesTest(): Unit = {
     val mdCl: BaseElement= project.getElementByID("_19_0_1_6490213_1566414121971_53324_4733") //Dog
-    assertTrue(WCaster[Class,WClass](WClass)(mdCl).safeWrap.get.ownedRedefinedAttributes.map(_.name) == Set("birth date"))
+    assertTrue(WCaster[Class,WClass](WClass)(mdCl).safeWrap.get.redefinedAttributes.map(_.name) == Set("birth date"))
   }
 
   @Test

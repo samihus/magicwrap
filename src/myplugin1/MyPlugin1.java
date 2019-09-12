@@ -49,7 +49,7 @@ public class MyPlugin1 extends Plugin
 			System.out.println(s);
 		}
 		Application.getInstance().getGUILog().writeLogText(s, true);
-		Optional<WClass> dd = Optional.of(wcl.getDirectParents().head());
+		Optional<WClass> dd = Optional.of(wcl.directParents().head());
 
 /*
 		cl.getNestedClassifier().forEach(x -> {

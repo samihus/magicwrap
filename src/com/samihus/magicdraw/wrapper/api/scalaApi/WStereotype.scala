@@ -1,20 +1,27 @@
 package com.samihus.magicdraw.wrapper.api.scalaApi
 
 import com.nomagic.uml2.ext.magicdraw.mdprofiles.Stereotype
-import com.samihus.magicdraw.wrapper.api.ScalaWrapper
-import com.samihus.magicdraw.wrapper.internal.traits
+import com.samihus.magicdraw.wrapper.WCaster
+import com.samihus.magicdraw.wrapper.api.ClassifierHierarchy
+import com.samihus.magicdraw.wrapper.traits.{HasAssociations, HasGeneralInfo, HasHierachy, HasProperties, IWType, STEREOTYPE, Stereotypable, Wrap, TypeOfWrappedElement}
 
-case class WStereotype(wrappedElement: Stereotype)
-  extends  com.samihus.magicdraw.wrapper.internal.traits.IWStereotype with ScalaWrapper {
-  /**
-    * @group Sub-SuperTypes
-    * @return List of direct parents
-    */
-  override def getDirectParents: List[traits.IWStereotype] = ???
+case class WStereotype(override val wrappedElement: Stereotype)
+  extends HasProperties
+    with HasGeneralInfo
+    with HasAssociations
+    with Stereotypable
+    with HasHierachy
+    with IWType
+    with Wrap[Stereotype] {
+  override type ClassifierType = WStereotype
 
-  /**
-    * @group Sub-SuperTypes
-    * @return List of all parents hierarchy
-    */
-  override def getAllParents: List[traits.IWStereotype] = ???
+  override def directParents: Set[WStereotype] = ClassifierHierarchy[WStereotype](wrappedElement)(WCaster.toMayBeWStereotype).directParents
+
+  override def allParents: Set[WStereotype] = ClassifierHierarchy[WStereotype](wrappedElement)(WCaster.toMayBeWStereotype).allParents
+
+  override def directChildren: Set[WStereotype] = ClassifierHierarchy[WStereotype](wrappedElement)(WCaster.toMayBeWStereotype).directChildren
+
+  override def allChildren: Set[WStereotype] = ClassifierHierarchy[WStereotype](wrappedElement)(WCaster.toMayBeWStereotype).allChildren
+
+  override val is: TypeOfWrappedElement = STEREOTYPE
 }

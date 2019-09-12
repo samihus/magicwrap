@@ -1,28 +1,28 @@
 package com.samihus.magicdraw.wrapper.api.scalaApi
 
-import java.util
-
-import com.nomagic.uml2.ext.jmi.helpers.ClassifierHelper
 import com.nomagic.uml2.ext.magicdraw.classes.mdinterfaces.Interface
-import com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Operation
-import com.samihus.magicdraw.wrapper.api.ScalaWrapper
-import com.samihus.magicdraw.wrapper.internal.traits.{IWOperation, IWInterface => WI}
+import com.samihus.magicdraw.wrapper.WCaster
+import com.samihus.magicdraw.wrapper.api.ClassifierHierarchy
+import com.samihus.magicdraw.wrapper.traits._
 
-import scala.collection.JavaConverters._
+case class WInterface(override val wrappedElement: Interface)
+  extends IWType
+    with HasAssociations
+    with HasGeneralInfo
+    with HasHierachy
+    with HasOperations
+    with HasProperties
+    with Stereotypable
+    with Wrap[Interface] {
+  override type ClassifierType = WInterface
 
-case class WInterface(override val wrappedElement: Interface) extends WI with ScalaWrapper {
+  override def directParents: Set[WInterface] = ClassifierHierarchy[WInterface](wrappedElement)(WCaster.toMayBeWInterface).directParents
 
-  override def ownedOperations: Set[IWOperation] =  wrappedElement.getOwnedOperation.asScala.map(WOperation).toSet
+  override def allParents: Set[WInterface] = ClassifierHierarchy[WInterface](wrappedElement)(WCaster.toMayBeWInterface).allParents
 
-  override def allOperations: Set[IWOperation] = {
-    val res: util.ArrayList[Operation] = new util.ArrayList()
-    ClassifierHelper.collectInheritedOperations(wrappedElement,res,true,true)
-    res.asScala.toSet.map(WOperation)
-  }
+  override def directChildren: Set[WInterface] = ClassifierHierarchy[WInterface](wrappedElement)(WCaster.toMayBeWInterface).directChildren
 
-  override def inheritedOperations: Set[IWOperation] = {
-    val res: util.ArrayList[Operation] = new util.ArrayList()
-    ClassifierHelper.collectInheritedOperations(wrappedElement,res,false,true)
-    res.asScala.toSet.map(WOperation)
-  }
+  override def allChildren: Set[WInterface] = ClassifierHierarchy[WInterface](wrappedElement)(WCaster.toMayBeWInterface).allChildren
+
+  override val is: TypeOfWrappedElement = INTERFACE
 }

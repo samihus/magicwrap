@@ -1,8 +1,9 @@
-package com.samihus.magicdraw.wrapper.internal.traits
+package com.samihus.magicdraw.wrapper.traits
 
 import com.nomagic.uml2.ext.jmi.helpers.CoreHelper
 import com.nomagic.uml2.ext.magicdraw.classes.mdinterfaces.Interface
 import com.nomagic.uml2.ext.magicdraw.classes.mdkernel.{Association, Class, DataType, Enumeration, PrimitiveType, Property}
+import com.samihus.magicdraw.wrapper.api.ScalaWrapper._
 
 import scala.collection.JavaConverters._
 
@@ -10,7 +11,7 @@ import scala.collection.JavaConverters._
   * @groupname General-Information
   *            General Information
   */
-trait IWAttribute extends IWNamedElement[Property] {
+trait IWAttribute extends HasGeneralInfo with Stereotypable with Wrap[Property] {
 
   /**
     * @group General-Information
@@ -32,10 +33,10 @@ trait IWAttribute extends IWNamedElement[Property] {
     case _ => None
   }
 
-  def hasType:IWType
 
   /**
     * Checks if attribute is originated by association end
+    *
     * @group General-Information
     * @return true if the property come from an association
     */
@@ -43,6 +44,7 @@ trait IWAttribute extends IWNamedElement[Property] {
 
   /**
     * General - Information
+    *
     * @return Some(Association) if isFromAssociation = true, None else
     *         TODO WRAP THE ASSOCIATION
     */

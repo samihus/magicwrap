@@ -9,7 +9,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="MagicDraw" level="project" />
-    <orderEntry type="library" name="KotlinJavaRuntime" level="project" />
     <orderEntry type="library" name="scala-sdk-2.12.8" level="project" />
     <orderEntry type="library" name="org.scalactic:scalactic_2.12:3.0.5" level="application" />
     <orderEntry type="library" name="org.scalatest:scalatest_2.12:3.0.5" level="application" />
