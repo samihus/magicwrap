@@ -11,6 +11,7 @@ import com.samihus.magicdraw.wrapper.api.scalaapi.WClass
 class JClass(c: Class) extends JHasProperties[WClass] with JHasGeneralInfo[Class] {
   override val w = WClass(c)
   override val ne: Class = c
+
   def getAllChildren: JSet[JClass] = w.allChildren
 
   def getDirectChildren: JSet[JClass] = w.directChildren
