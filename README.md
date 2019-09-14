@@ -1,4 +1,4 @@
-##Common  
+## Common  
 ### Description services
 * get name
 * get documentation
@@ -10,7 +10,7 @@
 * get stereotype instance applied (to access tagged values)
 ------------
 
-##Class
+## Class
 ### hierarchy services
 * list direct parents classes
 * list all parents classes
@@ -36,7 +36,7 @@
 ------------
 
 
-##Attributes
+## Attributes
 * get the attribute type
 * get multiplicity
 * get first redefined attribute
