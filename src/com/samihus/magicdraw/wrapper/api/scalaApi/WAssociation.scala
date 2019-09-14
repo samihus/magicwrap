@@ -3,7 +3,7 @@ package com.samihus.magicdraw.wrapper.api.scalaApi
 import com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Association
 import com.samihus.magicdraw.wrapper.WCaster
 import com.samihus.magicdraw.wrapper.api.ClassifierHierarchy
-import com.samihus.magicdraw.wrapper.traits.{ASSOCIATION, IWAssociation}
+import com.samihus.magicdraw.wrapper.traits.{ASSOCIATION, IWAssociation, TypeOfWrappedElement}
 
 case class WAssociation(override val wrappedElement: Association) extends IWAssociation {
 
@@ -19,5 +19,5 @@ case class WAssociation(override val wrappedElement: Association) extends IWAsso
 
   override def allChildren: Set[WAssociation] = ClassifierHierarchy[WAssociation](wrappedElement)(WCaster.toMayBeWAssociation).allChildren
 
-  override val is = ASSOCIATION
+  override val is: TypeOfWrappedElement = ASSOCIATION
 }

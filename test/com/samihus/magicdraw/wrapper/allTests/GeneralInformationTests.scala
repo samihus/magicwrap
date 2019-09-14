@@ -8,7 +8,7 @@ import com.nomagic.magicdraw.tests.MagicDrawTestRunner
 import com.nomagic.magicdraw.uml.BaseElement
 import com.samihus.magicdraw.wrapper.WCaster
 import com.samihus.magicdraw.wrapper.WCaster._
-import com.samihus.magicdraw.wrapper.traits.CLASS
+import com.samihus.magicdraw.wrapper.traits.{CLASS, ENUMERATION, INTERFACE, PACKAGE}
 import org.junit.Assert._
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -25,7 +25,7 @@ class GeneralInformationTests {
     projectsManager.getActiveProject
   }
 
-  val emptyClass: BaseElement = project.getElementByID("_19_0_1_6490213_1568265874138_307782_4671")
+  val emptyClass: BaseElement = project.getElementByID("_19_0_1_6490213_1568438944332_49944_4705")
   val animal: BaseElement     = project.getElementByID("_19_0_1_6490213_1566473579096_470275_4629")
   val pet: BaseElement        = project.getElementByID("_19_0_1_6490213_1566413767485_541943_4645")
   val dog: BaseElement        = project.getElementByID("_19_0_1_6490213_1566414121971_53324_4733")
@@ -37,7 +37,7 @@ class GeneralInformationTests {
   val moveableI: BaseElement  = project.getElementByID("_19_0_1_6490213_1566413913409_190065_4693")
   val spacLocI: BaseElement   = project.getElementByID("_19_0_1_6490213_1566474163273_634516_4694")
   val param: BaseElement      = project.getElementByID("_19_0_1_6490213_1568317061248_451752_4661")
-
+  val package1: BaseElement   = project.getElementByID("_19_0_1_6490213_1566413742058_44872_4610")
   //
   @Test def CastAndWrap = {
     assert(WCaster.toMayBeWClass(pet).isDefined)
@@ -52,7 +52,7 @@ class GeneralInformationTests {
   }
 
   @Test def testEmptyName = {
-    assertNull(emptyClass)
+    assertTrue(emptyClass.get.name == "")
   }
 
   @Test def testEmptyDoc = {
@@ -76,7 +76,16 @@ class GeneralInformationTests {
   }
 
   @Test def testGetClassWithEmptyAtt = {
-    assertNull(param)
+    assertTrue(param.get.is == CLASS)
+  }
+
+  // Transformations and wrapping testing
+  @Test def testImplicitEnumConversion(): Unit = {
+    assertTrue {
+      package1.get.is == PACKAGE &&
+      enum1.get.is == ENUMERATION &&
+      moveableI.get.is == INTERFACE
+    }
   }
 
 }

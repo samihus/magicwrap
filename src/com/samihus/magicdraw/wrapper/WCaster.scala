@@ -2,7 +2,7 @@ package com.samihus.magicdraw.wrapper
 
 import com.nomagic.magicdraw.uml.BaseElement
 import com.nomagic.uml2.ext.magicdraw.classes.mdinterfaces.Interface
-import com.nomagic.uml2.ext.magicdraw.classes.mdkernel.{Association, Class, DataType, Enumeration, EnumerationLiteral, NamedElement, Operation, Package, PrimitiveType, Property}
+import com.nomagic.uml2.ext.magicdraw.classes.mdkernel.{Association, Class, DataType, Enumeration => Enu, EnumerationLiteral, NamedElement, Operation, Package, PrimitiveType, Property}
 import com.nomagic.uml2.ext.magicdraw.mdprofiles.Stereotype
 import com.samihus.magicdraw.wrapper.api.scalaApi._
 import com.samihus.magicdraw.wrapper.traits.{CLASS, HasGeneralInfo, Stereotypable}
@@ -36,7 +36,7 @@ object WCaster {
   type AsAttribute          = WCaster[Property, WAttribute]
   type AsAssociation        = WCaster[Association, WAssociation]
   type AsDataType           = WCaster[DataType, WDataType]
-  type AsEnumeration        = WCaster[Enumeration, WEnumeration]
+  type AsEnumeration        = WCaster[Enu, WEnumeration]
   type AsEnumerationLiteral = WCaster[EnumerationLiteral, WEnumerationLiteral]
   type AsInterface          = WCaster[Interface, WInterface]
   type AsPackage            = WCaster[Package, WPackage]
@@ -57,7 +57,7 @@ object WCaster {
     new AsDataType(WDataType)(x).safeWrap
 
   def toMayBeWEnumeration(x: BaseElement): Option[WEnumeration] =
-    new AsEnumeration(WEnumeration)(x).safeWrap
+    new AsEnumeration (WEnumeration)(x).safeWrap
 
   def toMayBeWEnumerationLiteral(x: BaseElement): Option[WEnumerationLiteral] =
     new AsEnumerationLiteral(WEnumerationLiteral)(x).safeWrap
@@ -78,17 +78,17 @@ object WCaster {
     new AsOperation(WOperation)(x).safeWrap
 
   implicit def convert(baseElem: BaseElement): Option[HasGeneralInfo with Stereotypable] = baseElem match {
+    case s: Stereotype          => Some(WStereotype(s))
     case c: Class               => Some(WClass(c))
     case p: Property            => Some(WAttribute(p))
     case a: Association         => Some(WAssociation(a))
-    case d: DataType            => Some(WDataType(d))
     case l: EnumerationLiteral  => Some(WEnumerationLiteral(l))
-    case e: Enumeration         => Some(WEnumeration(e))
+    case r: Enu                 => Some(WEnumeration(r))
     case i: Interface           => Some(WInterface(i))
     case k: Package             => Some(WPackage(k))
     case v: PrimitiveType       => Some(WPrimitiveType(v))
-    case s: Stereotype          => Some(WStereotype(s))
     case o: Operation           => Some(WOperation(o))
+    case d: DataType            => Some(WDataType(d))
     case _                      => None
   }
 

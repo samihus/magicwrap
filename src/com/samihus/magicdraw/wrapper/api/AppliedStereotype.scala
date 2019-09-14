@@ -7,6 +7,7 @@ import com.samihus.magicdraw.wrapper.api.scalaApi.WStereotype
 import com.samihus.magicdraw.wrapper.traits.Stereotypable
 
 case class AppliedStereotype(element: Stereotypable, stereotype: WStereotype) {
+
   def getTagValueByName(tagName: String): Option[util.List[_]] = {
     if (isDefined && hasTag(tagName)) Some(tagValues(element.wrappedElement, stereotype.wrappedElement, tagName)) else None
   }

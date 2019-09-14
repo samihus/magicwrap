@@ -54,9 +54,10 @@ trait IWAttribute extends HasGeneralInfo with Stereotypable with Wrap[Property] 
     * @group General-Information
     * @return return the redefined attribute if it is defined. None else
     */
-  def redefinesAttribute: Option[IWAttribute] = wrappedElement.getRedefinedProperty.isEmpty match {
-    case true => None
-    case false => Some(WAttributeConstructor(wrappedElement.getRedefinedProperty.asScala.head))
+  def redefinesAttribute: Option[IWAttribute] = if (wrappedElement.getRedefinedProperty.isEmpty) {
+    None
+  } else {
+    Some(WAttributeConstructor(wrappedElement.getRedefinedProperty.asScala.head))
   }
 
   //todo : test

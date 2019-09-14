@@ -1,13 +1,13 @@
 package com.samihus.magicdraw.wrapper.api.scalaApi
 
 import com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Property
-import com.samihus.magicdraw.wrapper.traits.{ATTRIBUTE, IWAttribute}
+import com.samihus.magicdraw.wrapper.traits.{ATTRIBUTE, IWAttribute, TypeOfWrappedElement}
 
 /**
   * Wrapper fo a Magicdraw UML Property Instance
   *
-  * @param wrappedElement
+  * @param wrappedElement wrapped MD property element
   */
 case class WAttribute(override val wrappedElement: Property) extends IWAttribute {
-  override val is = ATTRIBUTE
+  override val is:TypeOfWrappedElement = ATTRIBUTE
 }
