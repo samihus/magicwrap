@@ -7,6 +7,7 @@ import com.nomagic.magicdraw.core.{Application, Project}
 import com.nomagic.magicdraw.tests.MagicDrawTestRunner
 import com.nomagic.magicdraw.uml.BaseElement
 import com.samihus.magicdraw.wrapper.WCaster._
+import com.samihus.magicdraw.wrapper.api.scalaapi.WClass
 import org.junit.Assert._
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -99,6 +100,7 @@ class ClassifiersTests {
   @Test def redefinedAttrTest(): Unit = {
     assertTrue(toMayBeWClass(cat).get.redefinedAttributes.map(_.name) == Set("specie"))
   }
+
 
 
 }

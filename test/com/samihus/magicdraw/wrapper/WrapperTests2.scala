@@ -8,8 +8,8 @@ import com.nomagic.magicdraw.core.project.{ProjectDescriptor, ProjectDescriptors
 import com.nomagic.magicdraw.core.{Application, Project}
 import com.nomagic.magicdraw.tests.MagicDrawTestRunner
 import com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Package
-import com.samihus.magicdraw.wrapper.api.scalaApi
-import com.samihus.magicdraw.wrapper.api.scalaApi.WPackage
+import com.samihus.magicdraw.wrapper.api.scalaapi
+import com.samihus.magicdraw.wrapper.api.scalaapi.WPackage
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.scalatest.{BeforeAndAfterAll, FunSuite}
@@ -48,7 +48,7 @@ class WrapperTests2 extends FunSuite with BeforeAndAfterAll {
 
   test("") {
     val pack = project.getElementByID("_19_0_1_6490213_1566413742058_44872_4610")
-    val wp = scalaApi.WPackage(pack.asInstanceOf[Package])
+    val wp = scalaapi.WPackage(pack.asInstanceOf[Package])
 
     assert({
       printer.write(wp.name)
@@ -58,6 +58,5 @@ class WrapperTests2 extends FunSuite with BeforeAndAfterAll {
       printer.write(wp.owner.asInstanceOf[Package].getName)
       wp.owner.asInstanceOf[Package].getName == "Model"
     }
-    //assert(wp.documentation == "documentation") //todo
   }
 }

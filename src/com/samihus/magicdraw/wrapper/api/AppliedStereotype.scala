@@ -3,7 +3,7 @@ package com.samihus.magicdraw.wrapper.api
 import java.util
 
 import com.nomagic.uml2.ext.jmi.helpers.StereotypesHelper.{getStereotypePropertyValue => tagValues}
-import com.samihus.magicdraw.wrapper.api.scalaApi.WStereotype
+import com.samihus.magicdraw.wrapper.api.scalaapi.WStereotype
 import com.samihus.magicdraw.wrapper.traits.Stereotypable
 
 case class AppliedStereotype(element: Stereotypable, stereotype: WStereotype) {

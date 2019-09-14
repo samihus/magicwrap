@@ -7,7 +7,7 @@ import com.nomagic.magicdraw.core.project.ProjectDescriptorsFactory;
 import com.nomagic.magicdraw.core.project.ProjectsManager;
 import com.nomagic.magicdraw.plugins.Plugin;
 import com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Class;
-import com.samihus.magicdraw.wrapper.api.scalaApi.WClass;
+import com.samihus.magicdraw.wrapper.api.scalaapi.WClass;
 
 import java.io.File;
 import java.util.HashMap;

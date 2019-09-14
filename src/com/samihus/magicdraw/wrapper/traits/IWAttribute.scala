@@ -46,10 +46,9 @@ trait IWAttribute extends HasGeneralInfo with Stereotypable with Wrap[Property] 
     * General - Information
     *
     * @return Some(Association) if isFromAssociation = true, None else
-    *         TODO WRAP THE ASSOCIATION
     */
   def association: Option[Association] = Option(wrappedElement.getAssociation)
-
+    //@TODO WRAP THE ASSOCIATION (isdefined may broke)
   /**
     * @group General-Information
     * @return return the redefined attribute if it is defined. None else
@@ -60,7 +59,6 @@ trait IWAttribute extends HasGeneralInfo with Stereotypable with Wrap[Property] 
     Some(WAttributeConstructor(wrappedElement.getRedefinedProperty.asScala.head))
   }
 
-  //todo : test
   /**
     * @group General-Information
     * @return return the redefined attribute set if it is defined. None else

@@ -1,4 +1,4 @@
-package com.samihus.magicdraw.wrapper.api.scalaApi
+package com.samihus.magicdraw.wrapper.api.scalaapi
 
 import java.util
 
@@ -26,29 +26,6 @@ case class WClass(override val wrappedElement: Class)
     with IWType {
   override type ClassifierType = WClass
 
-  //override def ownedOperations: Set[IWOperation] = wrappedElement.getOwnedOperation.asScala.map(WOperation).toSet
-
-  //override def directParents: Set[WClass] = wrappedElement.getSuperClass.asScala.map(WClass).toSet
-/*
-  override def allParents: Set[WClass] = {
-    var tmp = new java.util.ArrayList[Class]
-    val all: util.Collection[Class] = ClassifierHelper.collectGeneralClassifiersRecursively(wrappedElement, tmp)
-    all.asScala.map(WClass)(collection.breakOut)
-  }
-
-  override def directChildren: Set[WClass] = {
-    ClassifierHelper.getDerivedClassifiers(wrappedElement).asScala.toSet.flatMap(WCaster.toMayBeWClass)
-  }
-
-  override def allChildren: Set[WClass] = {
-    ClassifierHelper.getDerivedClassifiersRecursively(wrappedElement).asScala.toSet.flatMap(WCaster.toMayBeWClass)
-  }
-
-  override def directParents: Set[WClass] = {
-    ClassifierHelper.getGeneralClassifiers(wrappedElement).asScala.toSet.flatMap(WCaster.toMayBeWClass)
-  }
-
- */
   override def directParents: Set[WClass] = ClassifierHierarchy[WClass](wrappedElement)(WCaster.toMayBeWClass).directParents
 
   override def allParents: Set[WClass] = ClassifierHierarchy[WClass](wrappedElement)(WCaster.toMayBeWClass).allParents

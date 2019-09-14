@@ -4,7 +4,7 @@ import com.nomagic.magicdraw.uml.BaseElement
 import com.nomagic.uml2.ext.magicdraw.classes.mdinterfaces.Interface
 import com.nomagic.uml2.ext.magicdraw.classes.mdkernel.{Association, Class, DataType, Enumeration => Enu, EnumerationLiteral, NamedElement, Operation, Package, PrimitiveType, Property}
 import com.nomagic.uml2.ext.magicdraw.mdprofiles.Stereotype
-import com.samihus.magicdraw.wrapper.api.scalaApi._
+import com.samihus.magicdraw.wrapper.api.scalaapi._
 import com.samihus.magicdraw.wrapper.traits.{CLASS, HasGeneralInfo, Stereotypable}
 
 /**

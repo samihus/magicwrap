@@ -11,8 +11,8 @@ import myplugin1.MyPlugin1
 import org.junit.Assert._
 import org.junit.Test
 import org.junit.runner.RunWith
-import com.samihus.magicdraw.wrapper.api.scalaApi
-import com.samihus.magicdraw.wrapper.api.scalaApi.{WClass, WPackage}
+import com.samihus.magicdraw.wrapper.api.scalaapi
+import com.samihus.magicdraw.wrapper.api.scalaapi.{WClass, WPackage}
 
 //remove if not needed
 
@@ -61,7 +61,7 @@ class WrapperTest  {
 
   @Test
   def testStereotypeApplication(): Unit = {
-    val wp = scalaApi.WPackage(
+    val wp = scalaapi.WPackage(
       //package1
       project.getElementByID("_19_0_1_6490213_1566413742058_44872_4610").
         asInstanceOf[Package]
@@ -82,7 +82,7 @@ class WrapperTest  {
 
   @Test
   def testClassAttributes(): Unit = {
-    val cl = scalaApi.WClass(
+    val cl = scalaapi.WClass(
       //Pet
       project.getElementByID("_19_0_1_6490213_1566413767485_541943_4645").asInstanceOf[Class]
     )
@@ -91,7 +91,7 @@ class WrapperTest  {
 
   @Test
   def testClassAttributesFromAssociation(): Unit = {
-    val cl = scalaApi.WClass(
+    val cl = scalaapi.WClass(
       // Pet
       project.getElementByID("_19_0_1_6490213_1566413767485_541943_4645").asInstanceOf[Class]
     )
@@ -101,7 +101,7 @@ class WrapperTest  {
 
   @Test
   def testClassOwnedAttributes(): Unit = {
-    val cl = scalaApi.WClass(
+    val cl = scalaapi.WClass(
       // Pet
       project.getElementByID("_19_0_1_6490213_1566413767485_541943_4645").asInstanceOf[Class]
     )
@@ -115,7 +115,7 @@ class WrapperTest  {
 
   @Test
   def testHasAttributeOwned(): Unit ={
-    val cl = scalaApi.WClass(
+    val cl = scalaapi.WClass(
       // Pet
       project.getElementByID("_19_0_1_6490213_1566413767485_541943_4645").asInstanceOf[Class]
     )
@@ -124,7 +124,7 @@ class WrapperTest  {
 
   @Test
   def testAllAttributes(): Unit = {
-    val cl = scalaApi.WClass(
+    val cl = scalaapi.WClass(
       // Pet
       project.getElementByID("_19_0_1_6490213_1566413767485_541943_4645").asInstanceOf[Class]
     )
@@ -133,7 +133,7 @@ class WrapperTest  {
 
   @Test
   def testAllAttributesFromAssociations(): Unit = {
-    val cl = scalaApi.WClass(
+    val cl = scalaapi.WClass(
       // Pet
       project.getElementByID("_19_0_1_6490213_1566413767485_541943_4645").asInstanceOf[Class]
     )
@@ -142,7 +142,7 @@ class WrapperTest  {
 
   @Test
   def testAllAttributesNotFromAssociations(): Unit = {
-    val cl = scalaApi.WClass(
+    val cl = scalaapi.WClass(
       // Pet
       project.getElementByID("_19_0_1_6490213_1566413767485_541943_4645").asInstanceOf[Class]
     )
@@ -152,7 +152,7 @@ class WrapperTest  {
 
   @Test
   def testHasAttributeInherited(): Unit = {
-    val cl = scalaApi.WClass(
+    val cl = scalaapi.WClass(
       // Pet
       project.getElementByID("_19_0_1_6490213_1566413767485_541943_4645").asInstanceOf[Class]
     )
@@ -161,7 +161,7 @@ class WrapperTest  {
 
   @Test
   def testHasAttributeFromInheritedAssociation(): Unit = {
-    val cl = scalaApi.WClass(
+    val cl = scalaapi.WClass(
       // Pet
       project.getElementByID("_19_0_1_6490213_1566413767485_541943_4645").asInstanceOf[Class]
     )
@@ -170,7 +170,7 @@ class WrapperTest  {
 
   @Test
   def testClassGetAllParents(): Unit = {
-    val cl = scalaApi.WClass(
+    val cl = scalaapi.WClass(
       project.getElementByID("_19_0_1_6490213_1566414121971_53324_4733").asInstanceOf[Class]
     )
 
@@ -179,7 +179,7 @@ class WrapperTest  {
 
   @Test
   def testClassGetDirectParents(): Unit = {
-    val cl = scalaApi.WClass(
+    val cl = scalaapi.WClass(
       project.getElementByID("_19_0_1_6490213_1566414121971_53324_4733").asInstanceOf[Class]
     )
     val printer = new PrintWriter(
@@ -232,7 +232,6 @@ class WrapperTest  {
   @Test
   def testAttributeWrapper(): Unit = {
     val mdCl: BaseElement= project.getElementByID("_19_0_1_6490213_1566414121971_53324_4733") //Dog
-//TODO
   }
 
   @Test

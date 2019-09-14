@@ -1,4 +1,4 @@
-package com.samihus.magicdraw.wrapper.api.scalaApi
+package com.samihus.magicdraw.wrapper.api.scalaapi
 
 import com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Property
 import com.samihus.magicdraw.wrapper.traits.{ATTRIBUTE, IWAttribute, TypeOfWrappedElement}

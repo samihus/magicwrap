@@ -2,7 +2,7 @@ package com.samihus.magicdraw.wrapper.api
 
 import com.nomagic.uml2.ext.magicdraw.classes.mdinterfaces.Interface
 import com.nomagic.uml2.ext.magicdraw.classes.mdkernel.{Association, Class, DataType, Enumeration, EnumerationLiteral, Operation, PrimitiveType, Property}
-import com.samihus.magicdraw.wrapper.api.scalaApi._
+import com.samihus.magicdraw.wrapper.api.scalaapi._
 import com.samihus.magicdraw.wrapper.traits.{IWAssociation, IWAttribute, IWOperation}
 
 

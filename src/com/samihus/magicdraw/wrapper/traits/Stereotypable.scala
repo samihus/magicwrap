@@ -3,7 +3,7 @@ package com.samihus.magicdraw.wrapper.traits
 import com.nomagic.uml2.ext.jmi.helpers.StereotypesHelper.{hasStereotype => has}
 import com.nomagic.uml2.ext.magicdraw.classes.mdkernel.NamedElement
 import com.samihus.magicdraw.wrapper.api.AppliedStereotype
-import com.samihus.magicdraw.wrapper.api.scalaApi.WStereotype
+import com.samihus.magicdraw.wrapper.api.scalaapi.WStereotype
 
 /**
   * @groupname stereo
