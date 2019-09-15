@@ -7,7 +7,7 @@ import java.awt.event.ActionEvent
 import com.samihus.magicdraw.wrapper.WCaster
 import com.samihus.magicdraw.wrapper.api.scalaapi.{WClass, WDefaultBrowserAction}
 
-class example() extends WDefaultBrowserAction(actionName= "Name of the action") {
+class ScalaExample() extends WDefaultBrowserAction(actionName= "Name of the action") {
   override def actionPerformed(actionEvent: ActionEvent): Unit = {
     val mayBeWClass: Option[WClass] = getSelectedObjectAsBaseElement.flatMap(WCaster.toMayBeWClass)
   }
@@ -21,7 +21,7 @@ import com.nomagic.magicdraw.ui.browser.actions.DefaultBrowserAction;
 import com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Class;
 import com.samihus.magicdraw.wrapper.api.javaapi.JClass;
 
-import javax.swing.*;
+import javax.swing.KeyStroke;
 import java.awt.event.ActionEvent;
 import java.util.Optional;
 

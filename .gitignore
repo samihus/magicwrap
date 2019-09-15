@@ -28,5 +28,5 @@ hs_err_pid*
 /test/myplugin1/
 /test/com/samihus/magicdraw/wrapper/WrapperTests2.scala
 /test/com/samihus/magicdraw/wrapper/WrapperTest.scala
-/test/example.scala
+/test/ScalaExample.scala
 /test/Example.java
