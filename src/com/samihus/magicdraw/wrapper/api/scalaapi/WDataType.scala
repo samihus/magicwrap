@@ -1,9 +1,9 @@
 package com.samihus.magicdraw.wrapper.api.scalaapi
 
 import com.nomagic.uml2.ext.magicdraw.classes.mdkernel.DataType
-import com.samihus.magicdraw.wrapper.WCaster
+import com.samihus.magicdraw.wrapper.{DATATYPE, TypeOfWrappedElement, WCaster}
 import com.samihus.magicdraw.wrapper.api.ClassifierHierarchy
-import com.samihus.magicdraw.wrapper.traits.{DATATYPE, HasAssociations, HasGeneralInfo, HasHierachy, HasProperties, IWType, Stereotypable, Wrap, TypeOfWrappedElement}
+import com.samihus.magicdraw.wrapper.traits.{HasAssociations, HasGeneralInfo, HasHierachy, HasProperties, IWType, Stereotypable, Wrap}
 
 case class WDataType(override val wrappedElement: DataType)
   extends HasHierachy

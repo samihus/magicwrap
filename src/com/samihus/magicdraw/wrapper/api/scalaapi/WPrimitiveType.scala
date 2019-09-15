@@ -1,9 +1,9 @@
 package com.samihus.magicdraw.wrapper.api.scalaapi
 
 import com.nomagic.uml2.ext.magicdraw.classes.mdkernel.PrimitiveType
-import com.samihus.magicdraw.wrapper.WCaster
 import com.samihus.magicdraw.wrapper.api.ClassifierHierarchy
-import com.samihus.magicdraw.wrapper.traits.{HasGeneralInfo, HasProperties, IDataType, PRIMITIVETYPE, Wrap, TypeOfWrappedElement}
+import com.samihus.magicdraw.wrapper.traits.{IDataType, Wrap}
+import com.samihus.magicdraw.wrapper.{PRIMITIVETYPE, TypeOfWrappedElement, WCaster}
 
 case class WPrimitiveType(override val wrappedElement: PrimitiveType)
   extends IDataType with Wrap[PrimitiveType]{

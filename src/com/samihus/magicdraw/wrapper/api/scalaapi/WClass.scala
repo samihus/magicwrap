@@ -4,10 +4,9 @@ import java.util
 
 import com.nomagic.uml2.ext.jmi.helpers.ClassifierHelper
 import com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Class
-import com.samihus.magicdraw.wrapper.WCaster
+import com.samihus.magicdraw.wrapper.{CLASS, TypeOfWrappedElement, WCaster}
 import com.samihus.magicdraw.wrapper.api.ClassifierHierarchy
 import com.samihus.magicdraw.wrapper.traits._
-
 
 import scala.collection.JavaConverters._
 

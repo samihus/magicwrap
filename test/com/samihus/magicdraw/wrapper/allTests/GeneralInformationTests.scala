@@ -6,9 +6,8 @@ import com.nomagic.magicdraw.core.project.{ProjectDescriptor, ProjectDescriptors
 import com.nomagic.magicdraw.core.{Application, Project}
 import com.nomagic.magicdraw.tests.MagicDrawTestRunner
 import com.nomagic.magicdraw.uml.BaseElement
-import com.samihus.magicdraw.wrapper.WCaster
 import com.samihus.magicdraw.wrapper.WCaster._
-import com.samihus.magicdraw.wrapper.traits.{CLASS, ENUMERATION, INTERFACE, PACKAGE}
+import com.samihus.magicdraw.wrapper._
 import org.junit.Assert._
 import org.junit.Test
 import org.junit.runner.RunWith

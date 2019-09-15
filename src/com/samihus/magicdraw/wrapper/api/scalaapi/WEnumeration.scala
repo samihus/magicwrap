@@ -1,9 +1,9 @@
 package com.samihus.magicdraw.wrapper.api.scalaapi
 
 import com.nomagic.uml2.ext.magicdraw.classes.mdkernel.{Enumeration => Enu}
-import com.samihus.magicdraw.wrapper.WCaster
 import com.samihus.magicdraw.wrapper.api.ClassifierHierarchy
-import com.samihus.magicdraw.wrapper.traits.{ENUMERATION, HasHierachy, IDataType, IWType, Stereotypable, Wrap, TypeOfWrappedElement}
+import com.samihus.magicdraw.wrapper.traits.{IDataType, Wrap}
+import com.samihus.magicdraw.wrapper.{ENUMERATION, TypeOfWrappedElement, WCaster}
 
 case class WEnumeration(override val wrappedElement: Enu)
   extends  IDataType

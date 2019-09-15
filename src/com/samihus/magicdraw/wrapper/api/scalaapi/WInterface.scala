@@ -1,7 +1,7 @@
 package com.samihus.magicdraw.wrapper.api.scalaapi
 
 import com.nomagic.uml2.ext.magicdraw.classes.mdinterfaces.Interface
-import com.samihus.magicdraw.wrapper.WCaster
+import com.samihus.magicdraw.wrapper.{INTERFACE, TypeOfWrappedElement, WCaster}
 import com.samihus.magicdraw.wrapper.api.ClassifierHierarchy
 import com.samihus.magicdraw.wrapper.traits._
 

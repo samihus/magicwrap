@@ -1,9 +1,9 @@
 package com.samihus.magicdraw.wrapper.api.scalaapi
 
 import com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Association
-import com.samihus.magicdraw.wrapper.WCaster
+import com.samihus.magicdraw.wrapper.{ASSOCIATION, TypeOfWrappedElement, WCaster}
 import com.samihus.magicdraw.wrapper.api.ClassifierHierarchy
-import com.samihus.magicdraw.wrapper.traits.{ASSOCIATION, IWAssociation, TypeOfWrappedElement}
+import com.samihus.magicdraw.wrapper.traits.IWAssociation
 
 case class WAssociation(override val wrappedElement: Association) extends IWAssociation {
 

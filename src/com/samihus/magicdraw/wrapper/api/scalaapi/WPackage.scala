@@ -1,7 +1,8 @@
 package com.samihus.magicdraw.wrapper.api.scalaapi
 
 import com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Package
-import com.samihus.magicdraw.wrapper.traits.{HasGeneralInfo, PACKAGE, Stereotypable, Wrap, TypeOfWrappedElement}
+import com.samihus.magicdraw.wrapper.{PACKAGE, TypeOfWrappedElement}
+import com.samihus.magicdraw.wrapper.traits.{HasGeneralInfo, Stereotypable, Wrap}
 case class WPackage(override val wrappedElement: Package)
   extends HasGeneralInfo
     with Stereotypable

@@ -1,16 +1,15 @@
 package com.samihus.magicdraw.wrapper.allTests;
-import com.nomagic.magicdraw.core.project.*;
-import com.nomagic.magicdraw.core.*;
-import com.nomagic.magicdraw.tests.MagicDrawTestRunner;
-import com.nomagic.magicdraw.uml.BaseElement;
 
+import com.nomagic.magicdraw.core.Application;
+import com.nomagic.magicdraw.core.Project;
+import com.nomagic.magicdraw.core.project.ProjectDescriptor;
+import com.nomagic.magicdraw.core.project.ProjectDescriptorsFactory;
+import com.nomagic.magicdraw.core.project.ProjectsManager;
+import com.nomagic.magicdraw.uml.BaseElement;
 import com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Class;
 import com.samihus.magicdraw.wrapper.api.javaapi.Converter;
 import com.samihus.magicdraw.wrapper.api.javaapi.JClass;
 import com.samihus.magicdraw.wrapper.api.scalaapi.WClass;
-import com.samihus.magicdraw.wrapper.traits.CLASS;
-import com.samihus.magicdraw.wrapper.traits.TypeOfWrappedElement;
-import scala.collection.JavaConverters;
 
 import javax.annotation.Nullable;
 import java.io.File;

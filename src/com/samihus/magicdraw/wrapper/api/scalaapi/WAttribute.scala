@@ -1,7 +1,8 @@
 package com.samihus.magicdraw.wrapper.api.scalaapi
 
 import com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Property
-import com.samihus.magicdraw.wrapper.traits.{ATTRIBUTE, IWAttribute, TypeOfWrappedElement}
+import com.samihus.magicdraw.wrapper.{ATTRIBUTE, TypeOfWrappedElement}
+import com.samihus.magicdraw.wrapper.traits.IWAttribute
 
 /**
   * Wrapper fo a Magicdraw UML Property Instance

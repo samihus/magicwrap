@@ -5,13 +5,13 @@ import com.nomagic.uml2.ext.magicdraw.classes.mdinterfaces.Interface
 import com.nomagic.uml2.ext.magicdraw.classes.mdkernel.{Association, Class, DataType, Enumeration => Enu, EnumerationLiteral, NamedElement, Operation, Package, PrimitiveType, Property}
 import com.nomagic.uml2.ext.magicdraw.mdprofiles.Stereotype
 import com.samihus.magicdraw.wrapper.api.scalaapi._
-import com.samihus.magicdraw.wrapper.traits.{CLASS, HasGeneralInfo, Stereotypable}
+import com.samihus.magicdraw.wrapper.traits.{HasGeneralInfo, Stereotypable}
 
 /**
   * Encapsulates a base object in order to safe extract from it a named element (if relevant)
-  * {{
-  *
-  * }}
+  * {{{
+  *   WCaster[Class, WClass](WClass)(element)
+  * }}}
   *
   * @param baseElement : Element from a Magicdraw's model
   * @tparam T : Supposed type of element
