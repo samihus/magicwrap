@@ -1,22 +1,3 @@
-# How to use in a plugin 
-## Scala
-
-```scala 
-import java.awt.event.ActionEvent
-
-import com.samihus.magicdraw.wrapper.WCaster
-import com.samihus.magicdraw.wrapper.api.scalaapi.{WClass, WDefaultBrowserAction}
-
-class example() extends WDefaultBrowserAction(actionName= "Name of the action") {
-  override def actionPerformed(actionEvent: ActionEvent): Unit = {
-    val mayBeWClass: Option[WClass] = getSelectedObjectAsBaseElement.flatMap(WCaster.toMayBeWClass)
-  }
-}
-```
-
-## Java
-
-```java
 import com.nomagic.magicdraw.ui.browser.actions.DefaultBrowserAction;
 import com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Class;
 import com.samihus.magicdraw.wrapper.api.javaapi.JClass;
@@ -42,4 +23,3 @@ public class Example extends DefaultBrowserAction {
         }
     }
 }
-```
