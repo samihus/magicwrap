@@ -7,6 +7,7 @@ import com.samihus.magicdraw.wrapper.api.javaapi.JAttribute
 import com.samihus.magicdraw.wrapper.traits.HasProperties
 
 trait JHasProperties[T <: HasProperties] {
+
   val w: T
 
   def getAllAttributes: JSet[JAttribute] = w.allAttributes

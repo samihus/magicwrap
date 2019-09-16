@@ -38,7 +38,7 @@ trait IWAttribute extends HasGeneralInfo with Stereotypable with Wrap[Property] 
     * Checks if attribute is originated by association end
     *
     * @group General-Information
-    * @return true if the property come from an association
+    * @return true if the propertyName come from an association
     */
   def isFromAssociation: Boolean = association.isDefined
 

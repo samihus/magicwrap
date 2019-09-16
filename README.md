@@ -18,10 +18,11 @@ class ScalaExample() extends WDefaultBrowserAction(actionName= "Name of the acti
 
 ```java
 import com.nomagic.magicdraw.ui.browser.actions.DefaultBrowserAction;
-import com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Class;
+import com.nomagic.magicdraw.uml.BaseElement;
+import com.samihus.magicdraw.wrapper.api.javaapi.JCaster;
 import com.samihus.magicdraw.wrapper.api.javaapi.JClass;
 
-import javax.swing.KeyStroke;
+import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.util.Optional;
 
@@ -32,14 +33,8 @@ public class Example extends DefaultBrowserAction {
 
     @Override
     public void actionPerformed(ActionEvent evt) {
-        final Optional<Object> selectedObject = Optional.ofNullable(getSelectedObject());
-        if (selectedObject.isPresent()) {
-            try {
-                JClass JavaWrappedClass = new JClass((Class) selectedObject.get());
-            } catch (ClassCastException e) {
-                e.printStackTrace();
-            }
-        }
+        final Optional<BaseElement> selectedObject = Optional.ofNullable((BaseElement) getSelectedObject());
+        final Optional<JClass> jClass = selectedObject.flatMap(JCaster::toMayBeJClass);
     }
 }
 ```

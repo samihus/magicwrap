@@ -7,7 +7,7 @@ import com.samihus.magicdraw.wrapper.traits.IWAttribute
 /**
   * Wrapper fo a Magicdraw UML Property Instance
   *
-  * @param wrappedElement wrapped MD property element
+  * @param wrappedElement wrapped MD propertyName element
   */
 case class WAttribute(override val wrappedElement: Property) extends IWAttribute {
   override val is:TypeOfWrappedElement = ATTRIBUTE
