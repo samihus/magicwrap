@@ -159,8 +159,8 @@ java.lang.ClassNotFoundException: com.renault.dira.api.md.PivotFormatsPlugin
 2019-09-10 19:56:48,089 WARN main GUI - NO ICON FOR: group=options name=emf.uml2.v3.options.group.id
 2019-09-10 19:56:51,161 ERROR pool-MagicDraw-thread-1:Login GENERAL - Invalid host:port (s2326aos.mc2.renault.fr:3579).
 com.nomagic.esi.api.messages.exceptions.LoginException: Invalid host:port (s2326aos.mc2.renault.fr:3579).
-	at com.nomagic.esi.client.core.a.w.a(w.java:319)
-	at com.nomagic.esi.client.core.a.w.open(w.java:279)
+	at com.nomagic.esi.client.core.a.scalaWrapped.a(scalaWrapped.java:319)
+	at com.nomagic.esi.client.core.a.scalaWrapped.open(scalaWrapped.java:279)
 	at com.nomagic.esi.client.core.a.v.openSession(v.java:85)
 	at com.nomagic.esi.client.core.a.v.openSession(v.java:71)
 	at com.nomagic.esi.client.core.a.v.openSession(v.java:65)
@@ -185,7 +185,7 @@ com.nomagic.esi.api.messages.exceptions.LoginException: Invalid host:port (s2326
 	at com.nomagic.task.PooledThread.run(PooledThread.java:64)
 Caused by: java.lang.IllegalArgumentException: Address must be resolved.
 	at com.nomagic.esi.net.a.r.<init>(r.java:37)
-	at com.nomagic.esi.client.core.a.w.a(w.java:316)
+	at com.nomagic.esi.client.core.a.scalaWrapped.a(scalaWrapped.java:316)
 	... 23 more
 2019-09-10 19:56:51,685 WARN Thread-29 org.apache.axis.utils.JavaUtils - Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
 2019-09-12 21:17:28,142 WARN main GUI - NO ICON FOR: group=options name=HTTP_PROXY
@@ -349,8 +349,8 @@ java.lang.ClassNotFoundException: com.renault.dira.api.md.PivotFormatsPlugin
 2019-09-12 21:17:35,013 WARN main GUI - NO ICON FOR: group=options name=emf.uml2.v3.options.group.id
 2019-09-12 21:17:38,328 ERROR pool-MagicDraw-thread-1:Login GENERAL - Invalid host:port (s2326aos.mc2.renault.fr:3579).
 com.nomagic.esi.api.messages.exceptions.LoginException: Invalid host:port (s2326aos.mc2.renault.fr:3579).
-	at com.nomagic.esi.client.core.a.w.a(w.java:319)
-	at com.nomagic.esi.client.core.a.w.open(w.java:279)
+	at com.nomagic.esi.client.core.a.scalaWrapped.a(scalaWrapped.java:319)
+	at com.nomagic.esi.client.core.a.scalaWrapped.open(scalaWrapped.java:279)
 	at com.nomagic.esi.client.core.a.v.openSession(v.java:85)
 	at com.nomagic.esi.client.core.a.v.openSession(v.java:71)
 	at com.nomagic.esi.client.core.a.v.openSession(v.java:65)
@@ -375,7 +375,7 @@ com.nomagic.esi.api.messages.exceptions.LoginException: Invalid host:port (s2326
 	at com.nomagic.task.PooledThread.run(PooledThread.java:64)
 Caused by: java.lang.IllegalArgumentException: Address must be resolved.
 	at com.nomagic.esi.net.a.r.<init>(r.java:37)
-	at com.nomagic.esi.client.core.a.w.a(w.java:316)
+	at com.nomagic.esi.client.core.a.scalaWrapped.a(scalaWrapped.java:316)
 	... 23 more
 2019-09-12 21:17:39,102 WARN Thread-29 org.apache.axis.utils.JavaUtils - Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
 2019-09-12 21:30:43,763 WARN main GUI - NO ICON FOR: group=options name=HTTP_PROXY
@@ -539,8 +539,8 @@ java.lang.ClassNotFoundException: com.renault.dira.api.md.PivotFormatsPlugin
 2019-09-12 21:30:49,424 WARN main GUI - NO ICON FOR: group=options name=emf.uml2.v3.options.group.id
 2019-09-12 21:30:52,730 ERROR pool-MagicDraw-thread-1:Login GENERAL - Invalid host:port (s2326aos.mc2.renault.fr:3579).
 com.nomagic.esi.api.messages.exceptions.LoginException: Invalid host:port (s2326aos.mc2.renault.fr:3579).
-	at com.nomagic.esi.client.core.a.w.a(w.java:319)
-	at com.nomagic.esi.client.core.a.w.open(w.java:279)
+	at com.nomagic.esi.client.core.a.scalaWrapped.a(scalaWrapped.java:319)
+	at com.nomagic.esi.client.core.a.scalaWrapped.open(scalaWrapped.java:279)
 	at com.nomagic.esi.client.core.a.v.openSession(v.java:85)
 	at com.nomagic.esi.client.core.a.v.openSession(v.java:71)
 	at com.nomagic.esi.client.core.a.v.openSession(v.java:65)
@@ -565,7 +565,7 @@ com.nomagic.esi.api.messages.exceptions.LoginException: Invalid host:port (s2326
 	at com.nomagic.task.PooledThread.run(PooledThread.java:64)
 Caused by: java.lang.IllegalArgumentException: Address must be resolved.
 	at com.nomagic.esi.net.a.r.<init>(r.java:37)
-	at com.nomagic.esi.client.core.a.w.a(w.java:316)
+	at com.nomagic.esi.client.core.a.scalaWrapped.a(scalaWrapped.java:316)
 	... 23 more
 2019-09-12 21:30:53,233 WARN Thread-29 org.apache.axis.utils.JavaUtils - Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
 2019-09-12 21:36:27,390 WARN main GUI - NO ICON FOR: group=options name=HTTP_PROXY
@@ -729,8 +729,8 @@ java.lang.ClassNotFoundException: com.renault.dira.api.md.PivotFormatsPlugin
 2019-09-12 21:36:33,144 WARN main GUI - NO ICON FOR: group=options name=emf.uml2.v3.options.group.id
 2019-09-12 21:36:36,246 ERROR pool-MagicDraw-thread-1:Login GENERAL - Invalid host:port (s2326aos.mc2.renault.fr:3579).
 com.nomagic.esi.api.messages.exceptions.LoginException: Invalid host:port (s2326aos.mc2.renault.fr:3579).
-	at com.nomagic.esi.client.core.a.w.a(w.java:319)
-	at com.nomagic.esi.client.core.a.w.open(w.java:279)
+	at com.nomagic.esi.client.core.a.scalaWrapped.a(scalaWrapped.java:319)
+	at com.nomagic.esi.client.core.a.scalaWrapped.open(scalaWrapped.java:279)
 	at com.nomagic.esi.client.core.a.v.openSession(v.java:85)
 	at com.nomagic.esi.client.core.a.v.openSession(v.java:71)
 	at com.nomagic.esi.client.core.a.v.openSession(v.java:65)
@@ -755,7 +755,7 @@ com.nomagic.esi.api.messages.exceptions.LoginException: Invalid host:port (s2326
 	at com.nomagic.task.PooledThread.run(PooledThread.java:64)
 Caused by: java.lang.IllegalArgumentException: Address must be resolved.
 	at com.nomagic.esi.net.a.r.<init>(r.java:37)
-	at com.nomagic.esi.client.core.a.w.a(w.java:316)
+	at com.nomagic.esi.client.core.a.scalaWrapped.a(scalaWrapped.java:316)
 	... 23 more
 2019-09-12 21:36:36,846 WARN Thread-29 org.apache.axis.utils.JavaUtils - Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
 2019-09-12 21:39:31,957 WARN main GUI - NO ICON FOR: group=options name=HTTP_PROXY
@@ -919,8 +919,8 @@ java.lang.ClassNotFoundException: com.renault.dira.api.md.PivotFormatsPlugin
 2019-09-12 21:39:38,493 WARN main GUI - NO ICON FOR: group=options name=emf.uml2.v3.options.group.id
 2019-09-12 21:39:42,050 ERROR pool-MagicDraw-thread-1:Login GENERAL - Invalid host:port (s2326aos.mc2.renault.fr:3579).
 com.nomagic.esi.api.messages.exceptions.LoginException: Invalid host:port (s2326aos.mc2.renault.fr:3579).
-	at com.nomagic.esi.client.core.a.w.a(w.java:319)
-	at com.nomagic.esi.client.core.a.w.open(w.java:279)
+	at com.nomagic.esi.client.core.a.scalaWrapped.a(scalaWrapped.java:319)
+	at com.nomagic.esi.client.core.a.scalaWrapped.open(scalaWrapped.java:279)
 	at com.nomagic.esi.client.core.a.v.openSession(v.java:85)
 	at com.nomagic.esi.client.core.a.v.openSession(v.java:71)
 	at com.nomagic.esi.client.core.a.v.openSession(v.java:65)
@@ -945,7 +945,7 @@ com.nomagic.esi.api.messages.exceptions.LoginException: Invalid host:port (s2326
 	at com.nomagic.task.PooledThread.run(PooledThread.java:64)
 Caused by: java.lang.IllegalArgumentException: Address must be resolved.
 	at com.nomagic.esi.net.a.r.<init>(r.java:37)
-	at com.nomagic.esi.client.core.a.w.a(w.java:316)
+	at com.nomagic.esi.client.core.a.scalaWrapped.a(scalaWrapped.java:316)
 	... 23 more
 2019-09-12 21:39:42,731 WARN Thread-29 org.apache.axis.utils.JavaUtils - Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
 2019-09-12 21:41:12,414 WARN main GUI - NO ICON FOR: group=options name=HTTP_PROXY
@@ -1109,8 +1109,8 @@ java.lang.ClassNotFoundException: com.renault.dira.api.md.PivotFormatsPlugin
 2019-09-12 21:41:18,339 WARN main GUI - NO ICON FOR: group=options name=emf.uml2.v3.options.group.id
 2019-09-12 21:41:21,555 ERROR pool-MagicDraw-thread-1:Login GENERAL - Invalid host:port (s2326aos.mc2.renault.fr:3579).
 com.nomagic.esi.api.messages.exceptions.LoginException: Invalid host:port (s2326aos.mc2.renault.fr:3579).
-	at com.nomagic.esi.client.core.a.w.a(w.java:319)
-	at com.nomagic.esi.client.core.a.w.open(w.java:279)
+	at com.nomagic.esi.client.core.a.scalaWrapped.a(scalaWrapped.java:319)
+	at com.nomagic.esi.client.core.a.scalaWrapped.open(scalaWrapped.java:279)
 	at com.nomagic.esi.client.core.a.v.openSession(v.java:85)
 	at com.nomagic.esi.client.core.a.v.openSession(v.java:71)
 	at com.nomagic.esi.client.core.a.v.openSession(v.java:65)
@@ -1135,7 +1135,7 @@ com.nomagic.esi.api.messages.exceptions.LoginException: Invalid host:port (s2326
 	at com.nomagic.task.PooledThread.run(PooledThread.java:64)
 Caused by: java.lang.IllegalArgumentException: Address must be resolved.
 	at com.nomagic.esi.net.a.r.<init>(r.java:37)
-	at com.nomagic.esi.client.core.a.w.a(w.java:316)
+	at com.nomagic.esi.client.core.a.scalaWrapped.a(scalaWrapped.java:316)
 	... 23 more
 2019-09-12 21:41:22,273 WARN Thread-29 org.apache.axis.utils.JavaUtils - Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
 2019-09-12 21:44:16,777 WARN main GUI - NO ICON FOR: group=options name=HTTP_PROXY
@@ -1299,8 +1299,8 @@ java.lang.ClassNotFoundException: com.renault.dira.api.md.PivotFormatsPlugin
 2019-09-12 21:44:22,889 WARN main GUI - NO ICON FOR: group=options name=emf.uml2.v3.options.group.id
 2019-09-12 21:44:25,861 ERROR pool-MagicDraw-thread-1:Login GENERAL - Invalid host:port (s2326aos.mc2.renault.fr:3579).
 com.nomagic.esi.api.messages.exceptions.LoginException: Invalid host:port (s2326aos.mc2.renault.fr:3579).
-	at com.nomagic.esi.client.core.a.w.a(w.java:319)
-	at com.nomagic.esi.client.core.a.w.open(w.java:279)
+	at com.nomagic.esi.client.core.a.scalaWrapped.a(scalaWrapped.java:319)
+	at com.nomagic.esi.client.core.a.scalaWrapped.open(scalaWrapped.java:279)
 	at com.nomagic.esi.client.core.a.v.openSession(v.java:85)
 	at com.nomagic.esi.client.core.a.v.openSession(v.java:71)
 	at com.nomagic.esi.client.core.a.v.openSession(v.java:65)
@@ -1325,7 +1325,7 @@ com.nomagic.esi.api.messages.exceptions.LoginException: Invalid host:port (s2326
 	at com.nomagic.task.PooledThread.run(PooledThread.java:64)
 Caused by: java.lang.IllegalArgumentException: Address must be resolved.
 	at com.nomagic.esi.net.a.r.<init>(r.java:37)
-	at com.nomagic.esi.client.core.a.w.a(w.java:316)
+	at com.nomagic.esi.client.core.a.scalaWrapped.a(scalaWrapped.java:316)
 	... 23 more
 2019-09-12 21:44:26,680 WARN Thread-29 org.apache.axis.utils.JavaUtils - Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
 2019-09-12 21:50:13,495 WARN main GUI - NO ICON FOR: group=options name=HTTP_PROXY
@@ -1489,8 +1489,8 @@ java.lang.ClassNotFoundException: com.renault.dira.api.md.PivotFormatsPlugin
 2019-09-12 21:50:19,434 WARN main GUI - NO ICON FOR: group=options name=emf.uml2.v3.options.group.id
 2019-09-12 21:50:22,727 ERROR pool-MagicDraw-thread-1:Login GENERAL - Invalid host:port (s2326aos.mc2.renault.fr:3579).
 com.nomagic.esi.api.messages.exceptions.LoginException: Invalid host:port (s2326aos.mc2.renault.fr:3579).
-	at com.nomagic.esi.client.core.a.w.a(w.java:319)
-	at com.nomagic.esi.client.core.a.w.open(w.java:279)
+	at com.nomagic.esi.client.core.a.scalaWrapped.a(scalaWrapped.java:319)
+	at com.nomagic.esi.client.core.a.scalaWrapped.open(scalaWrapped.java:279)
 	at com.nomagic.esi.client.core.a.v.openSession(v.java:85)
 	at com.nomagic.esi.client.core.a.v.openSession(v.java:71)
 	at com.nomagic.esi.client.core.a.v.openSession(v.java:65)
@@ -1515,7 +1515,7 @@ com.nomagic.esi.api.messages.exceptions.LoginException: Invalid host:port (s2326
 	at com.nomagic.task.PooledThread.run(PooledThread.java:64)
 Caused by: java.lang.IllegalArgumentException: Address must be resolved.
 	at com.nomagic.esi.net.a.r.<init>(r.java:37)
-	at com.nomagic.esi.client.core.a.w.a(w.java:316)
+	at com.nomagic.esi.client.core.a.scalaWrapped.a(scalaWrapped.java:316)
 	... 23 more
 2019-09-12 21:50:23,368 WARN Thread-29 org.apache.axis.utils.JavaUtils - Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
 2019-09-13 20:02:47,467 WARN main GUI - NO ICON FOR: group=options name=HTTP_PROXY
@@ -1679,8 +1679,8 @@ java.lang.ClassNotFoundException: com.renault.dira.api.md.PivotFormatsPlugin
 2019-09-13 20:02:56,553 WARN main GUI - NO ICON FOR: group=options name=emf.uml2.v3.options.group.id
 2019-09-13 20:03:01,967 ERROR pool-MagicDraw-thread-1:Login GENERAL - Invalid host:port (s2326aos.mc2.renault.fr:3579).
 com.nomagic.esi.api.messages.exceptions.LoginException: Invalid host:port (s2326aos.mc2.renault.fr:3579).
-	at com.nomagic.esi.client.core.a.w.a(w.java:319)
-	at com.nomagic.esi.client.core.a.w.open(w.java:279)
+	at com.nomagic.esi.client.core.a.scalaWrapped.a(scalaWrapped.java:319)
+	at com.nomagic.esi.client.core.a.scalaWrapped.open(scalaWrapped.java:279)
 	at com.nomagic.esi.client.core.a.v.openSession(v.java:85)
 	at com.nomagic.esi.client.core.a.v.openSession(v.java:71)
 	at com.nomagic.esi.client.core.a.v.openSession(v.java:65)
@@ -1705,7 +1705,7 @@ com.nomagic.esi.api.messages.exceptions.LoginException: Invalid host:port (s2326
 	at com.nomagic.task.PooledThread.run(PooledThread.java:64)
 Caused by: java.lang.IllegalArgumentException: Address must be resolved.
 	at com.nomagic.esi.net.a.r.<init>(r.java:37)
-	at com.nomagic.esi.client.core.a.w.a(w.java:316)
+	at com.nomagic.esi.client.core.a.scalaWrapped.a(scalaWrapped.java:316)
 	... 23 more
 2019-09-13 20:03:03,082 WARN Thread-29 org.apache.axis.utils.JavaUtils - Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
 2019-09-13 20:09:01,937 WARN main GUI - NO ICON FOR: group=options name=HTTP_PROXY
@@ -1869,8 +1869,8 @@ java.lang.ClassNotFoundException: com.renault.dira.api.md.PivotFormatsPlugin
 2019-09-13 20:09:08,564 WARN main GUI - NO ICON FOR: group=options name=emf.uml2.v3.options.group.id
 2019-09-13 20:09:12,033 ERROR pool-MagicDraw-thread-1:Login GENERAL - Invalid host:port (s2326aos.mc2.renault.fr:3579).
 com.nomagic.esi.api.messages.exceptions.LoginException: Invalid host:port (s2326aos.mc2.renault.fr:3579).
-	at com.nomagic.esi.client.core.a.w.a(w.java:319)
-	at com.nomagic.esi.client.core.a.w.open(w.java:279)
+	at com.nomagic.esi.client.core.a.scalaWrapped.a(scalaWrapped.java:319)
+	at com.nomagic.esi.client.core.a.scalaWrapped.open(scalaWrapped.java:279)
 	at com.nomagic.esi.client.core.a.v.openSession(v.java:85)
 	at com.nomagic.esi.client.core.a.v.openSession(v.java:71)
 	at com.nomagic.esi.client.core.a.v.openSession(v.java:65)
@@ -1895,7 +1895,7 @@ com.nomagic.esi.api.messages.exceptions.LoginException: Invalid host:port (s2326
 	at com.nomagic.task.PooledThread.run(PooledThread.java:64)
 Caused by: java.lang.IllegalArgumentException: Address must be resolved.
 	at com.nomagic.esi.net.a.r.<init>(r.java:37)
-	at com.nomagic.esi.client.core.a.w.a(w.java:316)
+	at com.nomagic.esi.client.core.a.scalaWrapped.a(scalaWrapped.java:316)
 	... 23 more
 2019-09-13 20:09:12,637 WARN Thread-29 org.apache.axis.utils.JavaUtils - Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
 2019-09-13 21:04:41,516 WARN main GUI - NO ICON FOR: group=options name=HTTP_PROXY
@@ -2061,8 +2061,8 @@ java.lang.ClassNotFoundException: com.renault.dira.api.md.PivotFormatsPlugin
 2019-09-13 21:04:47,434 WARN main GUI - NO ICON FOR: group=options name=emf.uml2.v3.options.group.id
 2019-09-13 21:04:51,059 ERROR pool-MagicDraw-thread-1:Login GENERAL - Invalid host:port (s2326aos.mc2.renault.fr:3579).
 com.nomagic.esi.api.messages.exceptions.LoginException: Invalid host:port (s2326aos.mc2.renault.fr:3579).
-	at com.nomagic.esi.client.core.a.w.a(w.java:319)
-	at com.nomagic.esi.client.core.a.w.open(w.java:279)
+	at com.nomagic.esi.client.core.a.scalaWrapped.a(scalaWrapped.java:319)
+	at com.nomagic.esi.client.core.a.scalaWrapped.open(scalaWrapped.java:279)
 	at com.nomagic.esi.client.core.a.v.openSession(v.java:85)
 	at com.nomagic.esi.client.core.a.v.openSession(v.java:71)
 	at com.nomagic.esi.client.core.a.v.openSession(v.java:65)
@@ -2087,7 +2087,7 @@ com.nomagic.esi.api.messages.exceptions.LoginException: Invalid host:port (s2326
 	at com.nomagic.task.PooledThread.run(PooledThread.java:64)
 Caused by: java.lang.IllegalArgumentException: Address must be resolved.
 	at com.nomagic.esi.net.a.r.<init>(r.java:37)
-	at com.nomagic.esi.client.core.a.w.a(w.java:316)
+	at com.nomagic.esi.client.core.a.scalaWrapped.a(scalaWrapped.java:316)
 	... 23 more
 2019-09-13 21:04:51,701 WARN Thread-29 org.apache.axis.utils.JavaUtils - Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
 2019-09-13 21:21:05,399 WARN main GUI - NO ICON FOR: group=options name=HTTP_PROXY
@@ -2252,8 +2252,8 @@ java.lang.ClassNotFoundException: com.renault.dira.api.md.PivotFormatsPlugin
 2019-09-13 21:21:35,672 WARN main GUI - NO ICON FOR: group=options name=emf.uml2.v3.options.group.id
 2019-09-13 21:21:39,644 ERROR pool-MagicDraw-thread-1:Login GENERAL - Invalid host:port (s2326aos.mc2.renault.fr:3579).
 com.nomagic.esi.api.messages.exceptions.LoginException: Invalid host:port (s2326aos.mc2.renault.fr:3579).
-	at com.nomagic.esi.client.core.a.w.a(w.java:319)
-	at com.nomagic.esi.client.core.a.w.open(w.java:279)
+	at com.nomagic.esi.client.core.a.scalaWrapped.a(scalaWrapped.java:319)
+	at com.nomagic.esi.client.core.a.scalaWrapped.open(scalaWrapped.java:279)
 	at com.nomagic.esi.client.core.a.v.openSession(v.java:85)
 	at com.nomagic.esi.client.core.a.v.openSession(v.java:71)
 	at com.nomagic.esi.client.core.a.v.openSession(v.java:65)
@@ -2278,7 +2278,7 @@ com.nomagic.esi.api.messages.exceptions.LoginException: Invalid host:port (s2326
 	at com.nomagic.task.PooledThread.run(PooledThread.java:64)
 Caused by: java.lang.IllegalArgumentException: Address must be resolved.
 	at com.nomagic.esi.net.a.r.<init>(r.java:37)
-	at com.nomagic.esi.client.core.a.w.a(w.java:316)
+	at com.nomagic.esi.client.core.a.scalaWrapped.a(scalaWrapped.java:316)
 	... 23 more
 2019-09-13 21:21:40,306 WARN Thread-29 org.apache.axis.utils.JavaUtils - Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
 2019-09-13 21:34:13,169 WARN main GUI - NO ICON FOR: group=options name=HTTP_PROXY
@@ -2443,8 +2443,8 @@ java.lang.ClassNotFoundException: com.renault.dira.api.md.PivotFormatsPlugin
 2019-09-13 21:34:24,285 WARN Thread-29 org.apache.axis.utils.JavaUtils - Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
 2019-09-13 21:34:24,362 ERROR pool-MagicDraw-thread-1:Login GENERAL - Invalid host:port (s2326aos.mc2.renault.fr:3579).
 com.nomagic.esi.api.messages.exceptions.LoginException: Invalid host:port (s2326aos.mc2.renault.fr:3579).
-	at com.nomagic.esi.client.core.a.w.a(w.java:319)
-	at com.nomagic.esi.client.core.a.w.open(w.java:279)
+	at com.nomagic.esi.client.core.a.scalaWrapped.a(scalaWrapped.java:319)
+	at com.nomagic.esi.client.core.a.scalaWrapped.open(scalaWrapped.java:279)
 	at com.nomagic.esi.client.core.a.v.openSession(v.java:85)
 	at com.nomagic.esi.client.core.a.v.openSession(v.java:71)
 	at com.nomagic.esi.client.core.a.v.openSession(v.java:65)
@@ -2469,7 +2469,7 @@ com.nomagic.esi.api.messages.exceptions.LoginException: Invalid host:port (s2326
 	at com.nomagic.task.PooledThread.run(PooledThread.java:64)
 Caused by: java.lang.IllegalArgumentException: Address must be resolved.
 	at com.nomagic.esi.net.a.r.<init>(r.java:37)
-	at com.nomagic.esi.client.core.a.w.a(w.java:316)
+	at com.nomagic.esi.client.core.a.scalaWrapped.a(scalaWrapped.java:316)
 	... 23 more
 2019-09-14 07:15:00,572 WARN main GUI - NO ICON FOR: group=options name=HTTP_PROXY
 2019-09-14 07:15:03,134 WARN main GUI - NO ICON FOR: group=buttons name=import
@@ -2634,8 +2634,8 @@ java.lang.ClassNotFoundException: com.renault.dira.api.md.PivotFormatsPlugin
 2019-09-14 07:15:07,353 WARN main GUI - NO ICON FOR: group=options name=emf.uml2.v3.options.group.id
 2019-09-14 07:15:10,655 ERROR pool-MagicDraw-thread-1:Login GENERAL - Invalid host:port (s2326aos.mc2.renault.fr:3579).
 com.nomagic.esi.api.messages.exceptions.LoginException: Invalid host:port (s2326aos.mc2.renault.fr:3579).
-	at com.nomagic.esi.client.core.a.w.a(w.java:319)
-	at com.nomagic.esi.client.core.a.w.open(w.java:279)
+	at com.nomagic.esi.client.core.a.scalaWrapped.a(scalaWrapped.java:319)
+	at com.nomagic.esi.client.core.a.scalaWrapped.open(scalaWrapped.java:279)
 	at com.nomagic.esi.client.core.a.v.openSession(v.java:85)
 	at com.nomagic.esi.client.core.a.v.openSession(v.java:71)
 	at com.nomagic.esi.client.core.a.v.openSession(v.java:65)
@@ -2660,7 +2660,7 @@ com.nomagic.esi.api.messages.exceptions.LoginException: Invalid host:port (s2326
 	at com.nomagic.task.PooledThread.run(PooledThread.java:64)
 Caused by: java.lang.IllegalArgumentException: Address must be resolved.
 	at com.nomagic.esi.net.a.r.<init>(r.java:37)
-	at com.nomagic.esi.client.core.a.w.a(w.java:316)
+	at com.nomagic.esi.client.core.a.scalaWrapped.a(scalaWrapped.java:316)
 	... 23 more
 2019-09-14 07:15:11,429 WARN Thread-29 org.apache.axis.utils.JavaUtils - Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
 2019-09-14 07:25:53,082 WARN main GUI - NO ICON FOR: group=options name=HTTP_PROXY
@@ -2824,8 +2824,8 @@ java.lang.ClassNotFoundException: com.renault.dira.api.md.PivotFormatsPlugin
 2019-09-14 07:25:59,888 WARN main GUI - NO ICON FOR: group=options name=emf.uml2.v3.options.group.id
 2019-09-14 07:26:03,774 ERROR pool-MagicDraw-thread-1:Login GENERAL - Invalid host:port (s2326aos.mc2.renault.fr:3579).
 com.nomagic.esi.api.messages.exceptions.LoginException: Invalid host:port (s2326aos.mc2.renault.fr:3579).
-	at com.nomagic.esi.client.core.a.w.a(w.java:319)
-	at com.nomagic.esi.client.core.a.w.open(w.java:279)
+	at com.nomagic.esi.client.core.a.scalaWrapped.a(scalaWrapped.java:319)
+	at com.nomagic.esi.client.core.a.scalaWrapped.open(scalaWrapped.java:279)
 	at com.nomagic.esi.client.core.a.v.openSession(v.java:85)
 	at com.nomagic.esi.client.core.a.v.openSession(v.java:71)
 	at com.nomagic.esi.client.core.a.v.openSession(v.java:65)
@@ -2850,7 +2850,7 @@ com.nomagic.esi.api.messages.exceptions.LoginException: Invalid host:port (s2326
 	at com.nomagic.task.PooledThread.run(PooledThread.java:64)
 Caused by: java.lang.IllegalArgumentException: Address must be resolved.
 	at com.nomagic.esi.net.a.r.<init>(r.java:37)
-	at com.nomagic.esi.client.core.a.w.a(w.java:316)
+	at com.nomagic.esi.client.core.a.scalaWrapped.a(scalaWrapped.java:316)
 	... 23 more
 2019-09-14 07:26:04,429 WARN Thread-29 org.apache.axis.utils.JavaUtils - Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
 2019-09-14 07:32:00,408 WARN main GUI - NO ICON FOR: group=options name=HTTP_PROXY
@@ -3016,8 +3016,8 @@ java.lang.ClassNotFoundException: com.renault.dira.api.md.PivotFormatsPlugin
 2019-09-14 07:32:07,844 WARN main GUI - NO ICON FOR: group=options name=emf.uml2.v3.options.group.id
 2019-09-14 07:32:11,281 ERROR pool-MagicDraw-thread-1:Login GENERAL - Invalid host:port (s2326aos.mc2.renault.fr:3579).
 com.nomagic.esi.api.messages.exceptions.LoginException: Invalid host:port (s2326aos.mc2.renault.fr:3579).
-	at com.nomagic.esi.client.core.a.w.a(w.java:319)
-	at com.nomagic.esi.client.core.a.w.open(w.java:279)
+	at com.nomagic.esi.client.core.a.scalaWrapped.a(scalaWrapped.java:319)
+	at com.nomagic.esi.client.core.a.scalaWrapped.open(scalaWrapped.java:279)
 	at com.nomagic.esi.client.core.a.v.openSession(v.java:85)
 	at com.nomagic.esi.client.core.a.v.openSession(v.java:71)
 	at com.nomagic.esi.client.core.a.v.openSession(v.java:65)
@@ -3042,7 +3042,7 @@ com.nomagic.esi.api.messages.exceptions.LoginException: Invalid host:port (s2326
 	at com.nomagic.task.PooledThread.run(PooledThread.java:64)
 Caused by: java.lang.IllegalArgumentException: Address must be resolved.
 	at com.nomagic.esi.net.a.r.<init>(r.java:37)
-	at com.nomagic.esi.client.core.a.w.a(w.java:316)
+	at com.nomagic.esi.client.core.a.scalaWrapped.a(scalaWrapped.java:316)
 	... 23 more
 2019-09-14 07:32:11,834 WARN Thread-29 org.apache.axis.utils.JavaUtils - Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
 2019-09-14 07:54:00,499 WARN main GUI - NO ICON FOR: group=options name=HTTP_PROXY
@@ -3206,8 +3206,8 @@ java.lang.ClassNotFoundException: com.renault.dira.api.md.PivotFormatsPlugin
 2019-09-14 07:54:07,163 WARN main GUI - NO ICON FOR: group=options name=emf.uml2.v3.options.group.id
 2019-09-14 07:54:10,556 ERROR pool-MagicDraw-thread-1:Login GENERAL - Invalid host:port (s2326aos.mc2.renault.fr:3579).
 com.nomagic.esi.api.messages.exceptions.LoginException: Invalid host:port (s2326aos.mc2.renault.fr:3579).
-	at com.nomagic.esi.client.core.a.w.a(w.java:319)
-	at com.nomagic.esi.client.core.a.w.open(w.java:279)
+	at com.nomagic.esi.client.core.a.scalaWrapped.a(scalaWrapped.java:319)
+	at com.nomagic.esi.client.core.a.scalaWrapped.open(scalaWrapped.java:279)
 	at com.nomagic.esi.client.core.a.v.openSession(v.java:85)
 	at com.nomagic.esi.client.core.a.v.openSession(v.java:71)
 	at com.nomagic.esi.client.core.a.v.openSession(v.java:65)
@@ -3232,7 +3232,7 @@ com.nomagic.esi.api.messages.exceptions.LoginException: Invalid host:port (s2326
 	at com.nomagic.task.PooledThread.run(PooledThread.java:64)
 Caused by: java.lang.IllegalArgumentException: Address must be resolved.
 	at com.nomagic.esi.net.a.r.<init>(r.java:37)
-	at com.nomagic.esi.client.core.a.w.a(w.java:316)
+	at com.nomagic.esi.client.core.a.scalaWrapped.a(scalaWrapped.java:316)
 	... 23 more
 2019-09-14 07:54:11,351 WARN Thread-29 org.apache.axis.utils.JavaUtils - Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
 2019-09-14 07:57:29,747 WARN main GUI - NO ICON FOR: group=options name=HTTP_PROXY
@@ -3398,8 +3398,8 @@ java.lang.ClassNotFoundException: com.renault.dira.api.md.PivotFormatsPlugin
 2019-09-14 07:57:35,506 WARN main GUI - NO ICON FOR: group=options name=emf.uml2.v3.options.group.id
 2019-09-14 07:57:38,765 ERROR pool-MagicDraw-thread-1:Login GENERAL - Invalid host:port (s2326aos.mc2.renault.fr:3579).
 com.nomagic.esi.api.messages.exceptions.LoginException: Invalid host:port (s2326aos.mc2.renault.fr:3579).
-	at com.nomagic.esi.client.core.a.w.a(w.java:319)
-	at com.nomagic.esi.client.core.a.w.open(w.java:279)
+	at com.nomagic.esi.client.core.a.scalaWrapped.a(scalaWrapped.java:319)
+	at com.nomagic.esi.client.core.a.scalaWrapped.open(scalaWrapped.java:279)
 	at com.nomagic.esi.client.core.a.v.openSession(v.java:85)
 	at com.nomagic.esi.client.core.a.v.openSession(v.java:71)
 	at com.nomagic.esi.client.core.a.v.openSession(v.java:65)
@@ -3424,7 +3424,7 @@ com.nomagic.esi.api.messages.exceptions.LoginException: Invalid host:port (s2326
 	at com.nomagic.task.PooledThread.run(PooledThread.java:64)
 Caused by: java.lang.IllegalArgumentException: Address must be resolved.
 	at com.nomagic.esi.net.a.r.<init>(r.java:37)
-	at com.nomagic.esi.client.core.a.w.a(w.java:316)
+	at com.nomagic.esi.client.core.a.scalaWrapped.a(scalaWrapped.java:316)
 	... 23 more
 2019-09-14 07:57:39,260 WARN Thread-29 org.apache.axis.utils.JavaUtils - Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
 2019-09-14 17:32:08,648 WARN main GUI - NO ICON FOR: group=options name=HTTP_PROXY
@@ -3588,8 +3588,8 @@ java.lang.ClassNotFoundException: com.renault.dira.api.md.PivotFormatsPlugin
 2019-09-14 17:32:15,310 WARN main GUI - NO ICON FOR: group=options name=emf.uml2.v3.options.group.id
 2019-09-14 17:32:18,471 ERROR pool-MagicDraw-thread-1:Login GENERAL - Invalid host:port (s2326aos.mc2.renault.fr:3579).
 com.nomagic.esi.api.messages.exceptions.LoginException: Invalid host:port (s2326aos.mc2.renault.fr:3579).
-	at com.nomagic.esi.client.core.a.w.a(w.java:319)
-	at com.nomagic.esi.client.core.a.w.open(w.java:279)
+	at com.nomagic.esi.client.core.a.scalaWrapped.a(scalaWrapped.java:319)
+	at com.nomagic.esi.client.core.a.scalaWrapped.open(scalaWrapped.java:279)
 	at com.nomagic.esi.client.core.a.v.openSession(v.java:85)
 	at com.nomagic.esi.client.core.a.v.openSession(v.java:71)
 	at com.nomagic.esi.client.core.a.v.openSession(v.java:65)
@@ -3614,6 +3614,6 @@ com.nomagic.esi.api.messages.exceptions.LoginException: Invalid host:port (s2326
 	at com.nomagic.task.PooledThread.run(PooledThread.java:64)
 Caused by: java.lang.IllegalArgumentException: Address must be resolved.
 	at com.nomagic.esi.net.a.r.<init>(r.java:37)
-	at com.nomagic.esi.client.core.a.w.a(w.java:316)
+	at com.nomagic.esi.client.core.a.scalaWrapped.a(scalaWrapped.java:316)
 	... 23 more
 2019-09-14 17:32:19,237 WARN Thread-29 org.apache.axis.utils.JavaUtils - Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.

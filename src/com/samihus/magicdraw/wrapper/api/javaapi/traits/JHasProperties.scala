@@ -8,23 +8,23 @@ import com.samihus.magicdraw.wrapper.traits.HasProperties
 
 trait JHasProperties[T <: HasProperties] {
 
-  val w: T
+  val scalaWrapped: T
 
-  def getAllAttributes: JSet[JAttribute] = w.allAttributes
+  def getAllAttributes: JSet[JAttribute] = scalaWrapped.allAttributes
 
-  def getAllAttributesFromAssociation: JSet[JAttribute] = w.allAttributesFromAssociations
+  def getAllAttributesFromAssociation: JSet[JAttribute] = scalaWrapped.allAttributesFromAssociations
 
-  def getAllAttributesNotFromAssociation: JSet[JAttribute] = w.allAttributesNotFromAssociations
+  def getAllAttributesNotFromAssociation: JSet[JAttribute] = scalaWrapped.allAttributesNotFromAssociations
 
-  def getOwnedAttributes: JSet[JAttribute] = w.ownedAttributes
+  def getOwnedAttributes: JSet[JAttribute] = scalaWrapped.ownedAttributes
 
-  def getOwnedAttributesFromAssociation: JSet[JAttribute] = w.ownedAttributesFromAssociation
+  def getOwnedAttributesFromAssociation: JSet[JAttribute] = scalaWrapped.ownedAttributesFromAssociation
 
-  def getOwnedAttributesNotFromAssociation: JSet[JAttribute] = w.ownedAttributesNotFromAssociation
+  def getOwnedAttributesNotFromAssociation: JSet[JAttribute] = scalaWrapped.ownedAttributesNotFromAssociation
 
-  def getInheritedAttributes: JSet[JAttribute] = w.inheritedAttributes
+  def getInheritedAttributes: JSet[JAttribute] = scalaWrapped.inheritedAttributes
 
-  def getAttribute(attName: String): Option[JAttribute] = w.getAttribute(attName)
+  def getAttribute(attName: String): Option[JAttribute] = scalaWrapped.getAttribute(attName)
 
-  def getRedefinedAttributes: JSet[JAttribute] = w.redefinedAttributes
+  def getRedefinedAttributes: JSet[JAttribute] = scalaWrapped.redefinedAttributes
 }
