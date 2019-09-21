@@ -11,9 +11,9 @@ case class AppliedStereotype(element: Stereotypable, stereotype: WStereotype) {
 
   def hasTag(tagName: String): Boolean = stereotype.allAttributes.exists(_.name == tagName)
 
-  def getPropertyValueAsString(propertyName: String): Option[String] = getPropertySingleValue[String](propertyName)
+  def getTagValueAsString(propertyName: String): Option[String] = getTagSingleValue[String](propertyName)
 
-  def getPropertyValueAsBoolean(propertyName: String): Option[Boolean] = getPropertySingleValue[Boolean](propertyName)
+  def getTagValueAsBoolean(propertyName: String): Option[Boolean] = getTagSingleValue[Boolean](propertyName)
 
   /**
     * Get Tagged value as single element
@@ -22,7 +22,7 @@ case class AppliedStereotype(element: Stereotypable, stereotype: WStereotype) {
     * @tparam T type of the propertyName
     * @return element of the type T
     */
-  def getPropertySingleValue[T](propertyName: String)(implicit tag: ClassTag[T]): Option[T] = {
+  def getTagSingleValue[T](propertyName: String)(implicit tag: ClassTag[T]): Option[T] = {
     if (isDefined && !getValue(element.wrappedElement, stereotype.wrappedElement, propertyName).isEmpty) {
       getValue(element.wrappedElement, stereotype.wrappedElement, propertyName).asScala.head match {
         case tValue: T => Some(tValue)
@@ -45,7 +45,7 @@ case class AppliedStereotype(element: Stereotypable, stereotype: WStereotype) {
     * @param propertyName the tagged value property name
     * @return List containing the values
     */
-  def getPropertyListValues(propertyName: String): List[Any] = {
+  def getTageValuesList(propertyName: String): List[Any] = {
     getValue(element.wrappedElement, stereotype.wrappedElement, propertyName).asScala.toList
   }
 
