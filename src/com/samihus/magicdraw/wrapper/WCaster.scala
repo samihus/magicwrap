@@ -2,10 +2,12 @@ package com.samihus.magicdraw.wrapper
 
 import com.nomagic.magicdraw.uml.BaseElement
 import com.nomagic.uml2.ext.magicdraw.classes.mdinterfaces.Interface
-import com.nomagic.uml2.ext.magicdraw.classes.mdkernel.{Association, Class, DataType, Enumeration => Enu, EnumerationLiteral, NamedElement, Operation, Package, PrimitiveType, Property}
+import com.nomagic.uml2.ext.magicdraw.classes.mdkernel.{Association, Class, DataType, EnumerationLiteral, NamedElement, Operation, Package, PrimitiveType, Property, Enumeration => Enu}
 import com.nomagic.uml2.ext.magicdraw.mdprofiles.Stereotype
 import com.samihus.magicdraw.wrapper.api.scalaapi._
 import com.samihus.magicdraw.wrapper.traits.{HasGeneralInfo, Stereotypable}
+
+import scala.reflect.ClassTag
 
 /**
   * Encapsulates a base object in order to safe extract from it a named element (if relevant)
@@ -17,14 +19,14 @@ import com.samihus.magicdraw.wrapper.traits.{HasGeneralInfo, Stereotypable}
   * @tparam T : Supposed type of element
   */
 case class WCaster[T <: NamedElement, W](f: T => W)(baseElement: BaseElement) {
-  def safeWrap: Option[W] = safeCast.map(f)
+  def safeWrap(implicit tag: ClassTag[T]): Option[W] = safeCast.map(f)
 
   /**
     * Try to cast
     *
     * @return
     */
-  def safeCast: Option[T] = baseElement match {
+  def safeCast(implicit tag: ClassTag[T]): Option[T] = baseElement match {
     case t: T => Some(t)
     case _ => None
   }
