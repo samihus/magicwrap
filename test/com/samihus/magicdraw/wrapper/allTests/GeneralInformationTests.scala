@@ -38,43 +38,49 @@ class GeneralInformationTests {
   val param: BaseElement      = project.getElementByID("_19_0_1_6490213_1568317061248_451752_4661")
   val package1: BaseElement   = project.getElementByID("_19_0_1_6490213_1566413742058_44872_4610")
   //
-  @Test def CastAndWrap = {
+  @Test def CastAndWrap(): Unit = {
     assert(WCaster.toMayBeWClass(pet).isDefined)
   }
 
-  @Test def testName = {
+  @Test def testName(): Unit = {
     assertTrue(toMayBeWClass(pet).get.name == "Pet")
   }
 
-  @Test def testDoc = {
+  @Test def testDoc(): Unit = {
     assertTrue(toMayBeWClass(pet).get.documentation == "Un Animal domestique")
   }
 
-  @Test def testEmptyName = {
+  @Test def testEmptyName(): Unit = {
     assertTrue(emptyClass.get.name == "")
   }
 
-  @Test def testEmptyDoc = {
+  @Test def testEmptyDoc(): Unit = {
     assertTrue(toMayBeWClass(dog).get.documentation == "")
   }
 
-  @Test def testOwner = {
-    assertTrue(toMayBeWClass(dog).get.owner.getID == "_19_0_1_6490213_1566413742058_44872_4610")
+  @Test def testOwner(): Unit = {
+    val id = "_19_0_1_6490213_1566413742058_44872_4610"
+    assertTrue {
+      toMayBeWClass(dog).get.owner match {
+        case Left(value) => value.uid == id
+        case Right(value) => value.getID == id
+      }
+    }
   }
 
-  @Test def testImplicitElementConv = {
+  @Test def testImplicitElementConv(): Unit = {
     assertTrue(dog.get.name == "Dog")
   }
 
-  @Test def testImplicitElementConvWithPrecision = {
+  @Test def testImplicitElementConvWithPrecision(): Unit = {
     assertTrue(dog.get.is == CLASS)
   }
 
-  @Test def testGetClassWithEmptyAssociationEnd = {
+  @Test def testGetClassWithEmptyAssociationEnd(): Unit = {
     assertTrue(animal.get.name == "Animal")
   }
 
-  @Test def testGetClassWithEmptyAtt = {
+  @Test def testGetClassWithEmptyAtt(): Unit = {
     assertTrue(param.get.is == CLASS)
   }
 
