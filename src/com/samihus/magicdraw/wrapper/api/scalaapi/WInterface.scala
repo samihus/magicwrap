@@ -13,6 +13,7 @@ case class WInterface(override val wrappedElement: Interface)
     with HasOperations
     with HasProperties
     with Stereotypable
+    with HasOwnedElements
     with Wrap[Interface] {
   override type ClassifierType = WInterface
 

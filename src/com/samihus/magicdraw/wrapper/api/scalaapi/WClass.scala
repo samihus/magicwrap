@@ -17,6 +17,7 @@ case class WClass(override val wrappedElement: Class)
     with HasOperations
     with HasGeneralInfo
     with Stereotypable
+    with HasOwnedElements
     with IWType {
   override type ClassifierType = WClass
 

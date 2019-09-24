@@ -2,11 +2,12 @@ package com.samihus.magicdraw.wrapper.api.scalaapi
 
 import com.nomagic.uml2.ext.magicdraw.classes.mdkernel.{Enumeration => Enu}
 import com.samihus.magicdraw.wrapper.api.ClassifierHierarchy
-import com.samihus.magicdraw.wrapper.traits.{IDataType, Wrap}
+import com.samihus.magicdraw.wrapper.traits.{HasOwnedElements, IDataType, Wrap}
 import com.samihus.magicdraw.wrapper.{ENUMERATION, TypeOfWrappedElement, WCaster}
 
 case class WEnumeration(override val wrappedElement: Enu)
   extends  IDataType
+  with HasOwnedElements
     with Wrap[Enu] {
 
   override type ClassifierType = WEnumeration

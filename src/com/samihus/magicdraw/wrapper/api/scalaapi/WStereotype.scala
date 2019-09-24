@@ -3,7 +3,7 @@ package com.samihus.magicdraw.wrapper.api.scalaapi
 import com.nomagic.uml2.ext.magicdraw.mdprofiles.Stereotype
 import com.samihus.magicdraw.wrapper.{STEREOTYPE, TypeOfWrappedElement, WCaster}
 import com.samihus.magicdraw.wrapper.api.ClassifierHierarchy
-import com.samihus.magicdraw.wrapper.traits.{HasAssociations, HasGeneralInfo, HasHierachy, HasProperties, IWType, Stereotypable, Wrap}
+import com.samihus.magicdraw.wrapper.traits.{HasAssociations, HasGeneralInfo, HasHierachy, HasOwnedElements, HasProperties, IWType, Stereotypable, Wrap}
 
 case class WStereotype(override val wrappedElement: Stereotype)
   extends HasProperties
@@ -11,6 +11,7 @@ case class WStereotype(override val wrappedElement: Stereotype)
     with HasAssociations
     with Stereotypable
     with HasHierachy
+    with HasOwnedElements
     with IWType
     with Wrap[Stereotype] {
   override type ClassifierType = WStereotype
