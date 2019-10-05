@@ -13,9 +13,7 @@ case class WAssociation(override val wrappedElement: Association) extends IWAsso
 
   override def allParents: Set[WAssociation] = ClassifierHierarchy[WAssociation](wrappedElement)(WCaster.toMayBeWAssociation).allParents
 
-
   override def directChildren: Set[WAssociation] = ClassifierHierarchy[WAssociation](wrappedElement)(WCaster.toMayBeWAssociation).directChildren
-
 
   override def allChildren: Set[WAssociation] = ClassifierHierarchy[WAssociation](wrappedElement)(WCaster.toMayBeWAssociation).allChildren
 

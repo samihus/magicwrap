@@ -9,7 +9,9 @@ case class WPrimitiveType(override val wrappedElement: PrimitiveType)
   extends IDataType
     with HasOwnedElements
     with Wrap[PrimitiveType] {
+
   override type ClassifierType = WPrimitiveType
+
   override val is: TypeOfWrappedElement = PRIMITIVETYPE
 
   override def directParents: Set[WPrimitiveType] = ClassifierHierarchy[WPrimitiveType](wrappedElement)(WCaster.toMayBeWPrimitiveType).directParents

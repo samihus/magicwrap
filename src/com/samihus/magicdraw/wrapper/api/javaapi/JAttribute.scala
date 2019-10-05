@@ -9,4 +9,5 @@ class JAttribute(p: Property)
 
   override val scalaWrapped: WAttribute = WAttribute(p)
   override val ne: Property = p
+
 }

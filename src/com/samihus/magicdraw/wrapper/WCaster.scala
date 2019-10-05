@@ -11,14 +11,16 @@ import scala.reflect.ClassTag
 
 /**
   * Encapsulates a base object in order to safe extract from it a named element (if relevant)
-  * {{{
-  *   WCaster[Class, WClass](WClass)(element)
-  * }}}
+  *  {{{
+  *     WCaster[Class, WClass](WClass)(element)
+  *   }}}
   *
-  * @param baseElement : Element from a Magicdraw's model
-  * @tparam T : Supposed type of element
+  * @param f
+  * @param baseElement Element from a Magicdraw's model
+  * @tparam T Supposed type of element
+  * @tparam W Type of the wrapper
   */
-case class WCaster[T <: NamedElement, W](f: T => W)(baseElement: BaseElement) {
+case class WCaster[T <: NamedElement, W]( f: T => W)(baseElement: BaseElement) {
   def safeWrap(implicit tag: ClassTag[T]): Option[W] = safeCast.map(f)
 
   /**

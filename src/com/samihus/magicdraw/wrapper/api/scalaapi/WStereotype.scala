@@ -14,6 +14,7 @@ case class WStereotype(override val wrappedElement: Stereotype)
     with HasOwnedElements
     with IWType
     with Wrap[Stereotype] {
+
   override type ClassifierType = WStereotype
 
   override def directParents: Set[WStereotype] = ClassifierHierarchy[WStereotype](wrappedElement)(WCaster.toMayBeWStereotype).directParents
